@@ -117,7 +117,7 @@ export const content: Record<Language, Content> = {
       phoneLabel: "Phone",
       socialLabel: "Socials",
       email: "zavalarivas4@gmail.com",
-      phone: "+52 341 219 7006",
+      phone: "+1 (341) 219-7006",
       socials: {
         github: "https://github.com/MarvinZavala",
         linkedin: "https://www.linkedin.com/in/marvin-zavaladev/",
@@ -281,7 +281,7 @@ export const content: Record<Language, Content> = {
       phoneLabel: "Teléfono",
       socialLabel: "Redes Sociales",
       email: "zavalarivas4@gmail.com",
-      phone: "+52 341 219 7006",
+      phone: "+1 (341) 219-7006",
       socials: {
         github: "https://github.com/MarvinZavala",
         linkedin: "https://www.linkedin.com/in/marvin-zavaladev/",

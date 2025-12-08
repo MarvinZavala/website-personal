@@ -103,9 +103,24 @@ export function ContactSection() {
                 {contact.socialLabel}
               </h3>
               <div className="flex gap-4">
-                <SocialLink href={contact.socials.github} icon={<SiGithub className="w-6 h-6" />} label="GitHub" />
-                <SocialLink href={contact.socials.linkedin} icon={<SiLinkedin className="w-6 h-6" />} label="LinkedIn" />
-                <SocialLink href={contact.socials.instagram} icon={<SiInstagram className="w-6 h-6" />} label="Instagram" />
+                <SocialLink 
+                  href={contact.socials.github} 
+                  icon={<SiGithub className="w-6 h-6" />} 
+                  label="GitHub" 
+                  color="hover:text-white hover:bg-[#181717] hover:border-[#181717]"
+                />
+                <SocialLink 
+                  href={contact.socials.linkedin} 
+                  icon={<SiLinkedin className="w-6 h-6" />} 
+                  label="LinkedIn" 
+                  color="hover:text-white hover:bg-[#0A66C2] hover:border-[#0A66C2]"
+                />
+                <SocialLink 
+                  href={contact.socials.instagram} 
+                  icon={<SiInstagram className="w-6 h-6" />} 
+                  label="Instagram" 
+                  color="hover:text-white hover:bg-[#E4405F] hover:border-[#E4405F]"
+                />
               </div>
             </motion.div>
           </div>
@@ -115,13 +130,13 @@ export function ContactSection() {
   );
 }
 
-function SocialLink({ href, icon, label }: { href: string; icon: React.ReactNode; label: string }) {
+function SocialLink({ href, icon, label, color }: { href: string; icon: React.ReactNode; label: string; color: string }) {
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="h-14 w-14 border border-border rounded-full flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground/50 hover:bg-muted/50 transition-all duration-300"
+      className={`h-14 w-14 border border-border rounded-full flex items-center justify-center text-muted-foreground transition-all duration-300 ${color}`}
       aria-label={label}
     >
       {icon}
