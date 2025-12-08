@@ -3,6 +3,7 @@ import smartHomeImage from "@assets/generated_images/smart_home_dashboard_mockup
 import packagingImage from "@assets/generated_images/sustainable_packaging_design.png";
 import designSystemImage from "@assets/generated_images/design_system_documentation.png";
 import profileImage from "@assets/generated_images/professional_headshot_of_product_designer.png";
+import localfyImage from "@assets/screenshot-1765160017897.png";
 
 export type Language = 'en' | 'es';
 
@@ -104,6 +105,19 @@ export const content: Record<Language, Content> = {
     },
     projects: [
       {
+        id: "localfy",
+        title: "Localfy",
+        category: "Food Delivery • Startup",
+        image: localfyImage,
+        description: "A local food delivery platform for El Salvador with the lowest commissions in the market. Connecting communities.",
+        role: "Founder & Lead Developer",
+        year: "2025",
+        client: "Own Venture",
+        challenge: "Existing delivery platforms charge high commissions (up to 30%), hurting local businesses. The goal was to create a sustainable model with lower fees (15%) without sacrificing quality.",
+        solution: "I built a complete ecosystem: a user app for ordering, a business dashboard for management, and a driver app. Features include real-time tracking, secure payments, and category filtering.",
+        result: "Launching soon in El Salvador. The platform is designed to empower local businesses by keeping more revenue in their pockets while offering users a seamless experience.",
+      },
+      {
         id: "fintech-app",
         title: "Nova Finance",
         category: "Mobile App • Development",
@@ -197,6 +211,19 @@ export const content: Record<Language, Content> = {
       notFound: "Proyecto no encontrado",
     },
     projects: [
+      {
+        id: "localfy",
+        title: "Localfy",
+        category: "Delivery de Comida • Startup",
+        image: localfyImage,
+        description: "Lo mejor de tu ciudad. Una plataforma de delivery para El Salvador con las comisiones más bajas del mercado.",
+        role: "Fundador y Desarrollador Líder",
+        year: "2025",
+        client: "Emprendimiento Propio",
+        challenge: "Las plataformas existentes cobran comisiones altas (hasta 30%), afectando a los negocios locales. El reto fue crear un modelo sostenible con tarifas justas (15%) manteniendo alta calidad.",
+        solution: "Desarrollé un ecosistema completo: app de usuario, panel de control para negocios y app de repartidores. Incluye rastreo en tiempo real, pagos seguros y gestión de inventario.",
+        result: "Próximamente en El Salvador. Una plataforma diseñada para el mercado local que permite a los negocios crecer mientras ofrece una excelente experiencia a los usuarios.",
+      },
       {
         id: "fintech-app",
         title: "Nova Finance",
