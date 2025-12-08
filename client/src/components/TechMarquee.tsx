@@ -53,9 +53,9 @@ export function TechMarquee() {
         {technologies.map((tech, index) => (
           <div
             key={index}
-            className="flex items-center gap-3 text-lg font-medium text-muted-foreground hover:text-foreground transition-colors cursor-default group/item"
+            className="flex items-center gap-3 text-lg font-medium text-foreground transition-colors cursor-default group/item"
           >
-            <span className="text-3xl grayscale group-hover/item:grayscale-0 transition-all duration-300 transform group-hover/item:scale-110">
+            <span className="text-3xl transition-transform duration-300 transform group-hover/item:scale-110">
               <tech.icon style={{ color: tech.color }} />
             </span>
             <span className="font-sans tracking-tight">{tech.name}</span>
