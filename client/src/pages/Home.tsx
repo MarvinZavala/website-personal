@@ -4,6 +4,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { Footer } from "@/components/Footer";
 import { TechMarquee } from "@/components/TechMarquee";
 import { ProjectsHeader } from "@/components/ProjectsHeader";
+import { ContactSection } from "@/components/ContactSection";
 import { useLanguage } from "@/lib/i18n";
 
 export default function Home() {
@@ -21,7 +22,7 @@ export default function Home() {
           <TechMarquee />
         </div>
         
-        <section className="px-6 pb-32">
+        <section className="px-6 pb-20">
           <div className="container mx-auto">
             
             {/* Modern Projects Header */}
@@ -52,6 +53,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Contact Section */}
+        <ContactSection />
       </main>
 
       <Footer />

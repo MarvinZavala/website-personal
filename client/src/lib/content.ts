@@ -39,6 +39,24 @@ export interface Content {
     subtitle: string;
     stackTitle: string;
     projectsTitle: string;
+    projectsSubtitle: string;
+  };
+  contactSection: {
+    title: string;
+    subtitle: string;
+    role: string;
+    available: string;
+    emailLabel: string;
+    phoneLabel: string;
+    socialLabel: string;
+    email: string;
+    phone: string;
+    socials: {
+      github: string;
+      linkedin: string;
+      instagram: string;
+    };
+    cta: string;
   };
   footer: {
     cta: string;
@@ -89,6 +107,23 @@ export const content: Record<Language, Content> = {
       stackTitle: "Tech Stack",
       projectsTitle: "Projects I've Built",
       projectsSubtitle: "Selected Work 2024-2025",
+    },
+    contactSection: {
+      title: "Get in Touch",
+      subtitle: "Ready to start a project?",
+      role: "App & Web Developer",
+      available: "Available for freelance",
+      emailLabel: "Email",
+      phoneLabel: "Phone",
+      socialLabel: "Socials",
+      email: "zavalarivas4@gmail.com",
+      phone: "+52 341 219 7006",
+      socials: {
+        github: "https://github.com/MarvinZavala",
+        linkedin: "https://www.linkedin.com/in/marvin-zavaladev/",
+        instagram: "https://instagram.com/codemarvin",
+      },
+      cta: "Let's work together",
     },
     footer: {
       cta: "Let's build something great.",
@@ -236,6 +271,23 @@ export const content: Record<Language, Content> = {
       stackTitle: "Tech Stack",
       projectsTitle: "Proyectos que he construido",
       projectsSubtitle: "Trabajos Seleccionados 2024-2025",
+    },
+    contactSection: {
+      title: "Contáctame",
+      subtitle: "¿Listo para iniciar un proyecto?",
+      role: "Desarrollador Web y App",
+      available: "Disponible para freelance",
+      emailLabel: "Correo",
+      phoneLabel: "Teléfono",
+      socialLabel: "Redes Sociales",
+      email: "zavalarivas4@gmail.com",
+      phone: "+52 341 219 7006",
+      socials: {
+        github: "https://github.com/MarvinZavala",
+        linkedin: "https://www.linkedin.com/in/marvin-zavaladev/",
+        instagram: "https://instagram.com/codemarvin",
+      },
+      cta: "Trabajemos juntos",
     },
     footer: {
       cta: "Construyamos algo genial.",
