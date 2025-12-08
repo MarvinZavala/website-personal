@@ -10,17 +10,17 @@ export function Footer() {
           <div>
             <h2 className="font-serif text-3xl mb-6">{t.footer.cta}</h2>
             <a 
-              href="mailto:hello@alexchen.design" 
+              href="mailto:hello@marvinzavala.dev" 
               className="text-xl border-b border-foreground/20 hover:border-foreground transition-colors pb-1"
             >
-              hello@alexchen.design
+              hello@marvinzavala.dev
             </a>
           </div>
           
           <div className="flex gap-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-foreground transition-colors">Twitter</a>
+            <a href="#" className="hover:text-foreground transition-colors">GitHub</a>
             <a href="#" className="hover:text-foreground transition-colors">LinkedIn</a>
-            <a href="#" className="hover:text-foreground transition-colors">Dribbble</a>
+            <a href="#" className="hover:text-foreground transition-colors">Twitter</a>
           </div>
         </div>
         <div className="mt-20 text-xs text-muted-foreground/50">

@@ -10,7 +10,7 @@ export function Navigation() {
   const links = [
     { href: "/", label: t.nav.work },
     { href: "/about", label: t.nav.about },
-    { href: "mailto:hello@alexchen.design", label: t.nav.contact },
+    { href: "mailto:hello@marvinzavala.dev", label: t.nav.contact },
   ];
 
   const toggleLanguage = () => {
@@ -22,7 +22,7 @@ export function Navigation() {
       <div className="container mx-auto px-6 h-20 flex items-center justify-between">
         <Link href="/">
           <a className="text-xl font-serif font-medium tracking-tight hover:text-primary transition-colors">
-            Alex Chen
+            Marvin Zavala
           </a>
         </Link>
 

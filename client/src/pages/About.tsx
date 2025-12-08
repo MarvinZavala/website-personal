@@ -34,24 +34,24 @@ export default function About() {
                 <div className="space-y-8">
                   <div>
                     <div className="flex justify-between items-baseline mb-1">
-                      <h4 className="font-medium">{t.about.roles.stripe.title}</h4>
-                      <span className="text-sm text-muted-foreground">{t.about.roles.stripe.date}</span>
+                      <h4 className="font-medium">{t.about.roles.highschool.title}</h4>
+                      <span className="text-sm text-muted-foreground">{t.about.roles.highschool.date}</span>
                     </div>
-                    <p className="text-muted-foreground">{t.about.roles.stripe.company}</p>
+                    <p className="text-muted-foreground">{t.about.roles.highschool.company}</p>
                   </div>
                   <div>
                     <div className="flex justify-between items-baseline mb-1">
-                      <h4 className="font-medium">{t.about.roles.airbnb.title}</h4>
-                      <span className="text-sm text-muted-foreground">{t.about.roles.airbnb.date}</span>
+                      <h4 className="font-medium">{t.about.roles.freelance.title}</h4>
+                      <span className="text-sm text-muted-foreground">{t.about.roles.freelance.date}</span>
                     </div>
-                    <p className="text-muted-foreground">{t.about.roles.airbnb.company}</p>
+                    <p className="text-muted-foreground">{t.about.roles.freelance.company}</p>
                   </div>
                   <div>
                     <div className="flex justify-between items-baseline mb-1">
-                      <h4 className="font-medium">{t.about.roles.fantasy.title}</h4>
-                      <span className="text-sm text-muted-foreground">{t.about.roles.fantasy.date}</span>
+                      <h4 className="font-medium">{t.about.roles.projects.title}</h4>
+                      <span className="text-sm text-muted-foreground">{t.about.roles.projects.date}</span>
                     </div>
-                    <p className="text-muted-foreground">{t.about.roles.fantasy.company}</p>
+                    <p className="text-muted-foreground">{t.about.roles.projects.company}</p>
                   </div>
                 </div>
               </div>
@@ -66,7 +66,7 @@ export default function About() {
               <div className="aspect-[3/4] bg-muted overflow-hidden rounded-sm">
                 <img 
                   src={profileImage} 
-                  alt="Alex Chen" 
+                  alt="Marvin Zavala" 
                   className="w-full h-full object-cover"
                 />
               </div>
