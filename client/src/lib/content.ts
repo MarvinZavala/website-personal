@@ -6,6 +6,7 @@ import profileImage from "@assets/generated_images/professional_headshot_of_prod
 import localfyImage from "@assets/screenshot-1765160017897.png";
 import onlyPicImage from "@assets/screenshot-1765160140194.png";
 import negozappImage from "@assets/screenshot-1765218655116.png";
+import zummitImage from "@assets/screenshot-1765219186328.png";
 
 export type Language = 'en' | 'es';
 
@@ -174,6 +175,23 @@ export const content: Record<Language, Content> = {
         technologies: ["React", "Tailwind CSS", "AI Models", "Node.js", "PostgreSQL"],
         links: {
           live: "https://negozapp.com",
+        }
+      },
+      {
+        id: "zummit-payments",
+        title: "Zummit Payments",
+        category: "Fintech • Payment Processing",
+        image: zummitImage,
+        description: "Premium merchant services platform helping businesses save up to 90% on processing fees. Features secure credit card processing and POS integration.",
+        role: "Lead Frontend Developer",
+        year: "2024",
+        client: "Zummit Payments",
+        challenge: "Merchants struggle with opaque pricing and complex integrations. The challenge was to build a trustworthy, high-performance platform that simplifies payment processing.",
+        solution: "Developed a modern, responsive interface using React and Tailwind CSS. Focused on clear value proposition, speed, and trust signals with a professional blue aesthetic.",
+        result: "The platform processes over $100K+ monthly for 10,000+ customers with 99.9% uptime. Successfully positioned as a transparent alternative in the payments industry.",
+        technologies: ["React", "Tailwind CSS", "Framer Motion", "Node.js"],
+        links: {
+          live: "https://zummitpayments.com",
         }
       },
       {
@@ -355,6 +373,23 @@ export const content: Record<Language, Content> = {
         technologies: ["React", "Tailwind CSS", "AI Models", "Node.js", "PostgreSQL"],
         links: {
           live: "https://negozapp.com",
+        }
+      },
+      {
+        id: "zummit-payments",
+        title: "Zummit Payments",
+        category: "Fintech • Procesamiento de Pagos",
+        image: zummitImage,
+        description: "Plataforma de servicios mercantiles que ayuda a negocios a ahorrar hasta un 90% en comisiones. Procesamiento seguro de tarjetas e integración POS.",
+        role: "Desarrollador Frontend Líder",
+        year: "2024",
+        client: "Zummit Payments",
+        challenge: "Los comerciantes luchan con precios opacos e integraciones complejas. El reto fue construir una plataforma confiable y transparente que simplifique los pagos.",
+        solution: "Desarrollé una interfaz moderna y responsiva usando React y Tailwind CSS. Enfocado en una propuesta de valor clara, velocidad y confianza con una estética azul profesional.",
+        result: "La plataforma procesa más de $100K+ mensuales para 10,000+ clientes con 99.9% de uptime. Posicionada exitosamente como una alternativa transparente en la industria.",
+        technologies: ["React", "Tailwind CSS", "Framer Motion", "Node.js"],
+        links: {
+          live: "https://zummitpayments.com",
         }
       },
       {
