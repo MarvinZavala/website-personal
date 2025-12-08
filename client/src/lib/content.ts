@@ -7,6 +7,7 @@ import localfyImage from "@assets/screenshot-1765160017897.png";
 import onlyPicImage from "@assets/screenshot-1765160140194.png";
 import negozappImage from "@assets/screenshot-1765218655116.png";
 import zummitImage from "@assets/screenshot-1765219186328.png";
+import strategikImage from "@assets/screenshot-1765219432817.png";
 
 export type Language = 'en' | 'es';
 
@@ -160,6 +161,23 @@ export const content: Record<Language, Content> = {
     },
     skills: ["React", "TypeScript", "Next.js", "Node.js", "Tailwind CSS", "React Native", "PostgreSQL", "Figma"],
     projects: [
+      {
+        id: "strategik-agency",
+        title: "Strategik Agency",
+        category: "Agency Website • Digital Marketing",
+        image: strategikImage,
+        description: "Modern digital agency website featuring AI-powered solutions, automated workflows, and high-conversion landing pages for businesses in El Salvador.",
+        role: "Lead Developer",
+        year: "2025",
+        client: "Strategik Agency",
+        challenge: "The agency needed a high-performance website that could demonstrate their technical expertise in automation and AI while maintaining a 98% satisfaction rate.",
+        solution: "Built a lightning-fast site using Next.js with advanced animations and integrated lead generation forms. Features include an AI RAG chatbot demo and automated booking system.",
+        result: "The site achieves perfect Lighthouse scores and has helped over 500+ businesses digitize. The automated quoting system reduced response time to under 2 hours.",
+        technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "AI RAG", "TypeScript"],
+        links: {
+          live: "https://strategikagency.com",
+        }
+      },
       {
         id: "negozapp",
         title: "Negozapp",
@@ -358,6 +376,23 @@ export const content: Record<Language, Content> = {
     },
     skills: ["React", "TypeScript", "Next.js", "Node.js", "Tailwind CSS", "React Native", "PostgreSQL", "Figma"],
     projects: [
+      {
+        id: "strategik-agency",
+        title: "Strategik Agency",
+        category: "Agency Website • Digital Marketing",
+        image: strategikImage,
+        description: "Modern digital agency website featuring AI-powered solutions, automated workflows, and high-conversion landing pages for businesses in El Salvador.",
+        role: "Lead Developer",
+        year: "2025",
+        client: "Strategik Agency",
+        challenge: "The agency needed a high-performance website that could demonstrate their technical expertise in automation and AI while maintaining a 98% satisfaction rate.",
+        solution: "Built a lightning-fast site using Next.js with advanced animations and integrated lead generation forms. Features include an AI RAG chatbot demo and automated booking system.",
+        result: "The site achieves perfect Lighthouse scores and has helped over 500+ businesses digitize. The automated quoting system reduced response time to under 2 hours.",
+        technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "AI RAG", "TypeScript"],
+        links: {
+          live: "https://strategikagency.com",
+        }
+      },
       {
         id: "negozapp",
         title: "Negozapp",
