@@ -10,6 +10,7 @@ import zummitImage from "@assets/screenshot-1765219186328.png";
 import strategikImage from "@assets/screenshot-1765219432817.png";
 import absPlumbingImage from "@assets/screenshot-1765219563334.png";
 import twinHandymanImage from "@assets/screenshot-1765219596917.png";
+import oasisImage from "@assets/screenshot-1765220011149.png";
 
 export type Language = 'en' | 'es';
 
@@ -212,6 +213,23 @@ export const content: Record<Language, Content> = {
         technologies: ["React", "Tailwind CSS", "Framer Motion", "Next.js"],
         links: {
           live: "https://twinhandymanplumbing.com",
+        }
+      },
+      {
+        id: "oasis-oakland",
+        title: "Oasis Oakland",
+        category: "Mobile App • Community",
+        image: oasisImage,
+        description: "A free mobile app connecting Oakland residents with essential community services like healthcare, food, and education. Available in 3 languages.",
+        role: "Lead Developer",
+        year: "2024",
+        client: "Community Project",
+        challenge: "Access to essential services is often fragmented and hard to find. The challenge was to create a centralized, offline-first resource that requires no login and is accessible to non-English speakers.",
+        solution: "Developed a cross-platform mobile app using React Native with offline caching, multi-language support (English, Spanish, Mandarin), and an interactive map for service discovery.",
+        result: "The app is now helping thousands of Oakland residents find verified free resources. It features smart filtering, real-time status updates, and privacy-first data handling.",
+        technologies: ["React Native", "TypeScript", "Google Maps API", "Local Storage"],
+        links: {
+          live: "https://oasisoakland.com",
         }
       },
       {
@@ -461,6 +479,23 @@ export const content: Record<Language, Content> = {
         technologies: ["React", "Tailwind CSS", "Framer Motion", "Next.js"],
         links: {
           live: "https://twinhandymanplumbing.com",
+        }
+      },
+      {
+        id: "oasis-oakland",
+        title: "Oasis Oakland",
+        category: "App Móvil • Comunidad",
+        image: oasisImage,
+        description: "Una app móvil gratuita que conecta a residentes de Oakland con servicios comunitarios esenciales como salud, alimentos y educación. Disponible en 3 idiomas.",
+        role: "Desarrollador Líder",
+        year: "2024",
+        client: "Proyecto Comunitario",
+        challenge: "El acceso a servicios esenciales a menudo está fragmentado y es difícil de encontrar. El reto fue crear un recurso centralizado, 'offline-first' que no requiera registro y sea accesible para no hablantes de inglés.",
+        solution: "Desarrollé una app móvil multiplataforma usando React Native con caché offline, soporte multi-idioma (Inglés, Español, Mandarín) y un mapa interactivo para descubrir servicios.",
+        result: "La app ahora ayuda a miles de residentes de Oakland a encontrar recursos gratuitos verificados. Cuenta con filtros inteligentes, actualizaciones de estado en tiempo real y manejo de datos privado.",
+        technologies: ["React Native", "TypeScript", "Google Maps API", "Local Storage"],
+        links: {
+          live: "https://oasisoakland.com",
         }
       },
       {
