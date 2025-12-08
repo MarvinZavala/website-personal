@@ -88,6 +88,7 @@ export const content: Record<Language, Content> = {
       subtitle: "I don't just write syntax; I build experiences. From local startups to AI art platforms, I create software that makes a difference.",
       stackTitle: "Tech Stack",
       projectsTitle: "Projects I've Built",
+      projectsSubtitle: "Selected Work 2024-2025",
     },
     footer: {
       cta: "Let's build something great.",
@@ -234,6 +235,7 @@ export const content: Record<Language, Content> = {
       subtitle: "No solo escribo sintaxis; construyo experiencias. Desde startups locales hasta plataformas de arte IA, creo software que marca la diferencia.",
       stackTitle: "Tech Stack",
       projectsTitle: "Proyectos que he construido",
+      projectsSubtitle: "Trabajos Seleccionados 2024-2025",
     },
     footer: {
       cta: "Construyamos algo genial.",
