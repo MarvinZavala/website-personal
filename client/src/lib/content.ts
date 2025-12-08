@@ -9,6 +9,7 @@ import negozappImage from "@assets/screenshot-1765218655116.png";
 import zummitImage from "@assets/screenshot-1765219186328.png";
 import strategikImage from "@assets/screenshot-1765219432817.png";
 import absPlumbingImage from "@assets/screenshot-1765219563334.png";
+import twinHandymanImage from "@assets/screenshot-1765219596917.png";
 
 export type Language = 'en' | 'es';
 
@@ -194,6 +195,23 @@ export const content: Record<Language, Content> = {
         technologies: ["React", "Tailwind CSS", "Framer Motion", "SEO"],
         links: {
           live: "https://abs-plumbingservices.com",
+        }
+      },
+      {
+        id: "twin-handyman",
+        title: "Twin Handyman & Plumbing",
+        category: "Service Business • Lead Gen",
+        image: twinHandymanImage,
+        description: "Bay Area's #1 trusted plumbing and handyman service website. Features instant virtual estimates, 24/7 emergency booking, and a showcase of over 500+ happy clients.",
+        role: "Web Developer",
+        year: "2024",
+        client: "Twin Handyman",
+        challenge: "The client needed to stand out in a competitive market and streamline their booking process for emergency services.",
+        solution: "Built a high-trust, conversion-focused site with a 'Free Virtual Estimate' feature and clear emergency call-to-actions. Integrated review showcasing to build instant credibility.",
+        result: "The new site has cemented their reputation as the #1 trusted local experts, driving a steady stream of high-value leads and reducing administrative time for estimates.",
+        technologies: ["React", "Tailwind CSS", "Framer Motion", "Next.js"],
+        links: {
+          live: "https://twinhandymanplumbing.com",
         }
       },
       {
@@ -426,6 +444,23 @@ export const content: Record<Language, Content> = {
         technologies: ["React", "Tailwind CSS", "Framer Motion", "SEO"],
         links: {
           live: "https://abs-plumbingservices.com",
+        }
+      },
+      {
+        id: "twin-handyman",
+        title: "Twin Handyman & Plumbing",
+        category: "Negocio de Servicios • Lead Gen",
+        image: twinHandymanImage,
+        description: "El sitio web de servicios de plomería y handyman #1 de confianza en el Área de la Bahía. Ofrece estimaciones virtuales instantáneas y reservas de emergencia 24/7.",
+        role: "Desarrollador Web",
+        year: "2024",
+        client: "Twin Handyman",
+        challenge: "El cliente necesitaba destacar en un mercado competitivo y agilizar su proceso de reservas para servicios de emergencia.",
+        solution: "Construí un sitio de alta confianza enfocado en conversión con función de 'Estimación Virtual Gratuita' y llamadas a la acción claras. Integré reseñas para credibilidad instantánea.",
+        result: "El nuevo sitio ha consolidado su reputación como los expertos locales #1 de confianza, generando un flujo constante de clientes potenciales de alto valor.",
+        technologies: ["React", "Tailwind CSS", "Framer Motion", "Next.js"],
+        links: {
+          live: "https://twinhandymanplumbing.com",
         }
       },
       {
