@@ -4,6 +4,7 @@ import packagingImage from "@assets/generated_images/sustainable_packaging_desig
 import designSystemImage from "@assets/generated_images/design_system_documentation.png";
 import profileImage from "@assets/generated_images/professional_headshot_of_product_designer.png";
 import localfyImage from "@assets/screenshot-1765160017897.png";
+import onlyPicImage from "@assets/screenshot-1765160140194.png";
 
 export type Language = 'en' | 'es';
 
@@ -104,6 +105,19 @@ export const content: Record<Language, Content> = {
       notFound: "Project not found",
     },
     projects: [
+      {
+        id: "onlypic",
+        title: "OnlyPic.art",
+        category: "AI Art Platform • Web App",
+        image: onlyPicImage,
+        description: "Transform photos into AI masterpieces and monetize creativity. A platform for creators to share and earn from their AI art.",
+        role: "Creator & Lead Developer",
+        year: "2025",
+        client: "Personal Project",
+        challenge: "Building a secure platform for monetizing AI art with military-grade encryption and handling high-resolution image processing at scale was the primary technical hurdle.",
+        solution: "I implemented advanced AI models for photo transformation, a secure marketplace for unlocking originals, and a creator monetization system that allows artists to keep 80% of earnings.",
+        result: "The platform has processed over 10K+ AI transformations and hosts 5K+ active creators, generating significant revenue for the artist community.",
+      },
       {
         id: "localfy",
         title: "Localfy",
@@ -211,6 +225,19 @@ export const content: Record<Language, Content> = {
       notFound: "Proyecto no encontrado",
     },
     projects: [
+      {
+        id: "onlypic",
+        title: "OnlyPic.art",
+        category: "Plataforma de Arte IA • Web App",
+        image: onlyPicImage,
+        description: "Transforma fotos en obras maestras de IA y monetiza tu creatividad. Una plataforma para que creadores compartan y ganen con su arte.",
+        role: "Creador y Desarrollador Líder",
+        year: "2025",
+        client: "Proyecto Personal",
+        challenge: "Construir una plataforma segura para monetizar arte IA con encriptación de grado militar y manejar el procesamiento de imágenes de alta resolución a escala fue el principal reto técnico.",
+        solution: "Implementé modelos avanzados de IA para la transformación de fotos, un mercado seguro para desbloquear originales y un sistema de monetización para creadores.",
+        result: "La plataforma ha procesado más de 10K+ transformaciones de IA y aloja a más de 5K+ creadores activos, generando ingresos significativos para la comunidad.",
+      },
       {
         id: "localfy",
         title: "Localfy",
