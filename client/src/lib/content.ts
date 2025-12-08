@@ -20,6 +20,11 @@ export interface Project {
   challenge: string;
   solution: string;
   result: string;
+  technologies: string[];
+  links: {
+    live?: string;
+    code?: string;
+  };
 }
 
 export interface Content {
@@ -32,6 +37,7 @@ export interface Content {
     titlePart1: string;
     titlePart2: string;
     subtitle: string;
+    stackTitle: string;
   };
   footer: {
     cta: string;
@@ -60,8 +66,12 @@ export interface Content {
     solutionTitle: string;
     resultTitle: string;
     notFound: string;
+    techStack: string;
+    viewLive: string;
+    viewCode: string;
   };
   projects: Project[];
+  skills: string[];
 }
 
 export const content: Record<Language, Content> = {
@@ -75,6 +85,7 @@ export const content: Record<Language, Content> = {
       titlePart1: "App & Web Developer building",
       titlePart2: "digital solutions",
       subtitle: "I'm a high school developer passionate about creating intuitive apps and websites. Transforming complex problems into clean code.",
+      stackTitle: "Tech Stack",
     },
     footer: {
       cta: "Let's build something great.",
@@ -103,7 +114,11 @@ export const content: Record<Language, Content> = {
       solutionTitle: "The Solution",
       resultTitle: "The Result",
       notFound: "Project not found",
+      techStack: "Technologies Used",
+      viewLive: "Visit Website",
+      viewCode: "View Code",
     },
+    skills: ["React", "TypeScript", "Next.js", "Node.js", "Tailwind CSS", "React Native", "PostgreSQL", "Figma"],
     projects: [
       {
         id: "onlypic",
@@ -117,6 +132,10 @@ export const content: Record<Language, Content> = {
         challenge: "Building a secure platform for monetizing AI art with military-grade encryption and handling high-resolution image processing at scale was the primary technical hurdle.",
         solution: "I implemented advanced AI models for photo transformation, a secure marketplace for unlocking originals, and a creator monetization system that allows artists to keep 80% of earnings.",
         result: "The platform has processed over 10K+ AI transformations and hosts 5K+ active creators, generating significant revenue for the artist community.",
+        technologies: ["Next.js", "Firebase", "Stripe", "AI Models", "Tailwind CSS"],
+        links: {
+          live: "https://onlypic.art",
+        }
       },
       {
         id: "localfy",
@@ -130,6 +149,10 @@ export const content: Record<Language, Content> = {
         challenge: "Existing delivery platforms charge high commissions (up to 30%), hurting local businesses. The goal was to create a sustainable model with lower fees (15%) without sacrificing quality.",
         solution: "I built a complete ecosystem: a user app for ordering, a business dashboard for management, and a driver app. Features include real-time tracking, secure payments, and category filtering.",
         result: "Launching soon in El Salvador. The platform is designed to empower local businesses by keeping more revenue in their pockets while offering users a seamless experience.",
+        technologies: ["React Native", "Node.js", "PostgreSQL", "Socket.io", "Google Maps API"],
+        links: {
+          live: "https://getlocalfy.com",
+        }
       },
       {
         id: "fintech-app",
@@ -143,6 +166,10 @@ export const content: Record<Language, Content> = {
         challenge: "The main challenge was ensuring real-time data updates while maintaining a smooth 60fps UI. Security was also a top priority for handling transaction data.",
         solution: "I implemented a local-first architecture with encrypted on-device storage. The UI was built with React Native for cross-platform performance.",
         result: "The app successfully handles thousands of transactions with zero lag. It taught me the importance of optimizing render cycles in mobile development.",
+        technologies: ["React Native", "SQLite", "TypeScript", "Reanimated"],
+        links: {
+          code: "https://github.com/marvinzavala/nova-finance",
+        }
       },
       {
         id: "smart-home",
@@ -156,6 +183,8 @@ export const content: Record<Language, Content> = {
         challenge: "Integrating various API standards from different device manufacturers into a unified interface was complex. Real-time state management was crucial.",
         solution: "I used WebSockets for real-time communication and a modular component system. The dashboard supports dark mode and is fully responsive.",
         result: "A fully functional dashboard that aggregates multiple smart devices. It reduced the friction of managing a smart home ecosystem.",
+        technologies: ["React", "WebSockets", "IoT APIs", "Chart.js"],
+        links: {}
       },
       {
         id: "eco-packaging",
@@ -169,6 +198,8 @@ export const content: Record<Language, Content> = {
         challenge: "The client needed a custom storefront that reflected their eco-friendly brand while ensuring high conversion rates and fast load times.",
         solution: "I built a custom storefront using Next.js for server-side rendering and optimal SEO. The checkout flow was streamlined to reduce cart abandonment.",
         result: "The site achieves a 100/100 Lighthouse performance score. Sales conversion improved significantly due to the optimized user flow.",
+        technologies: ["Next.js", "Shopify API", "Framer Motion"],
+        links: {}
       },
       {
         id: "design-system",
@@ -182,6 +213,10 @@ export const content: Record<Language, Content> = {
         challenge: "Creating components that are flexible enough for various use cases but strict enough to maintain consistency. Accessibility was a key requirement.",
         solution: "I built the library with strict TypeScript typing and WAI-ARIA compliance. Documentation was generated automatically from the code comments.",
         result: "A robust set of components that accelerates development time. It is now used as the foundation for all my personal and freelance projects.",
+        technologies: ["React", "Storybook", "TypeScript", "Rollup"],
+        links: {
+          code: "https://github.com/marvinzavala/orbit-ui",
+        }
       },
     ],
   },
@@ -195,6 +230,7 @@ export const content: Record<Language, Content> = {
       titlePart1: "Desarrollador de Apps y Web creando",
       titlePart2: "soluciones digitales",
       subtitle: "Soy un desarrollador de preparatoria apasionado por crear aplicaciones y sitios web intuitivos. Transformando problemas complejos en código limpio.",
+      stackTitle: "Tech Stack",
     },
     footer: {
       cta: "Construyamos algo genial.",
@@ -223,7 +259,11 @@ export const content: Record<Language, Content> = {
       solutionTitle: "La Solución",
       resultTitle: "El Resultado",
       notFound: "Proyecto no encontrado",
+      techStack: "Tecnologías",
+      viewLive: "Ver Sitio",
+      viewCode: "Ver Código",
     },
+    skills: ["React", "TypeScript", "Next.js", "Node.js", "Tailwind CSS", "React Native", "PostgreSQL", "Figma"],
     projects: [
       {
         id: "onlypic",
@@ -237,6 +277,10 @@ export const content: Record<Language, Content> = {
         challenge: "Construir una plataforma segura para monetizar arte IA con encriptación de grado militar y manejar el procesamiento de imágenes de alta resolución a escala fue el principal reto técnico.",
         solution: "Implementé modelos avanzados de IA para la transformación de fotos, un mercado seguro para desbloquear originales y un sistema de monetización para creadores.",
         result: "La plataforma ha procesado más de 10K+ transformaciones de IA y aloja a más de 5K+ creadores activos, generando ingresos significativos para la comunidad.",
+        technologies: ["Next.js", "Firebase", "Stripe", "AI Models", "Tailwind CSS"],
+        links: {
+          live: "https://onlypic.art",
+        }
       },
       {
         id: "localfy",
@@ -250,6 +294,10 @@ export const content: Record<Language, Content> = {
         challenge: "Las plataformas existentes cobran comisiones altas (hasta 30%), afectando a los negocios locales. El reto fue crear un modelo sostenible con tarifas justas (15%) manteniendo alta calidad.",
         solution: "Desarrollé un ecosistema completo: app de usuario, panel de control para negocios y app de repartidores. Incluye rastreo en tiempo real, pagos seguros y gestión de inventario.",
         result: "Próximamente en El Salvador. Una plataforma diseñada para el mercado local que permite a los negocios crecer mientras ofrece una excelente experiencia a los usuarios.",
+        technologies: ["React Native", "Node.js", "PostgreSQL", "Socket.io", "Google Maps API"],
+        links: {
+          live: "https://getlocalfy.com",
+        }
       },
       {
         id: "fintech-app",
@@ -263,6 +311,10 @@ export const content: Record<Language, Content> = {
         challenge: "El desafío principal fue asegurar actualizaciones de datos en tiempo real manteniendo una UI fluida a 60fps. La seguridad también fue prioridad.",
         solution: "Implementé una arquitectura local-first con almacenamiento encriptado. La UI fue construida con React Native para rendimiento multiplataforma.",
         result: "La app maneja miles de transacciones sin lag. Me enseñó la importancia de optimizar ciclos de renderizado en desarrollo móvil.",
+        technologies: ["React Native", "SQLite", "TypeScript", "Reanimated"],
+        links: {
+          code: "https://github.com/marvinzavala/nova-finance",
+        }
       },
       {
         id: "smart-home",
@@ -276,6 +328,8 @@ export const content: Record<Language, Content> = {
         challenge: "Integrar varios estándares de API de diferentes fabricantes en una interfaz unificada fue complejo. La gestión de estado en tiempo real fue crucial.",
         solution: "Usé WebSockets para comunicación en tiempo real y un sistema de componentes modular. El dashboard soporta modo oscuro y es responsivo.",
         result: "Un dashboard funcional que agrega múltiples dispositivos. Redujo la fricción de gestionar un ecosistema de hogar inteligente.",
+        technologies: ["React", "WebSockets", "IoT APIs", "Chart.js"],
+        links: {}
       },
       {
         id: "eco-packaging",
@@ -289,6 +343,8 @@ export const content: Record<Language, Content> = {
         challenge: "El cliente necesitaba una tienda personalizada que reflejara su marca ecológica mientras aseguraba altas tasas de conversión.",
         solution: "Construí una tienda personalizada usando Next.js para renderizado del lado del servidor y SEO óptimo. El flujo de pago fue optimizado.",
         result: "El sitio logra una puntuación de rendimiento Lighthouse de 100/100. La conversión de ventas mejoró significativamente.",
+        technologies: ["Next.js", "Shopify API", "Framer Motion"],
+        links: {}
       },
       {
         id: "design-system",
@@ -302,6 +358,10 @@ export const content: Record<Language, Content> = {
         challenge: "Crear componentes flexibles para varios casos de uso pero estrictos para mantener consistencia. La accesibilidad fue un requisito clave.",
         solution: "Construí la librería con tipado estricto de TypeScript y cumplimiento WAI-ARIA. La documentación se generó automáticamente.",
         result: "Un set robusto de componentes que acelera el tiempo de desarrollo. Ahora es la base para todos mis proyectos personales.",
+        technologies: ["React", "Storybook", "TypeScript", "Rollup"],
+        links: {
+          code: "https://github.com/marvinzavala/orbit-ui",
+        }
       },
     ],
   },

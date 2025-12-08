@@ -3,7 +3,7 @@ import { useRoute } from "wouter";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ExternalLink, Github } from "lucide-react";
 import { Link } from "wouter";
 import { useLanguage } from "@/lib/i18n";
 
@@ -17,7 +17,7 @@ export default function CaseStudy() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [params?.id]);
 
   if (!project) return (
     <div className="min-h-screen bg-background flex items-center justify-center">
@@ -48,7 +48,34 @@ export default function CaseStudy() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="font-serif text-5xl md:text-6xl mb-6">{project.title}</h1>
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+              <h1 className="font-serif text-5xl md:text-6xl">{project.title}</h1>
+              <div className="flex gap-4">
+                {project.links?.live && (
+                  <a 
+                    href={project.links.live} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-4 py-2 bg-foreground text-background rounded-md text-sm font-medium hover:bg-foreground/90 transition-colors"
+                  >
+                    {t.caseStudy.viewLive}
+                    <ExternalLink className="w-4 h-4 ml-2" />
+                  </a>
+                )}
+                {project.links?.code && (
+                  <a 
+                    href={project.links.code} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-4 py-2 border border-border rounded-md text-sm font-medium hover:bg-muted transition-colors"
+                  >
+                    {t.caseStudy.viewCode}
+                    <Github className="w-4 h-4 ml-2" />
+                  </a>
+                )}
+              </div>
+            </div>
+            
             <p className="text-xl text-muted-foreground max-w-2xl mb-12 leading-relaxed">
               {project.description}
             </p>
@@ -88,6 +115,18 @@ export default function CaseStudy() {
         </motion.div>
 
         <div className="container mx-auto px-6 max-w-3xl prose prose-lg prose-neutral">
+          {/* Tech Stack Section */}
+          <div className="mb-12 not-prose">
+            <h3 className="font-serif text-2xl mb-4">{t.caseStudy.techStack}</h3>
+            <div className="flex flex-wrap gap-2">
+              {project.technologies.map(tech => (
+                <span key={tech} className="px-3 py-1 bg-muted rounded-full text-sm font-medium text-foreground/80">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+
           <h3 className="font-serif text-3xl mb-6">{t.caseStudy.challengeTitle}</h3>
           <p className="mb-12 text-muted-foreground">
             {project.challenge}
