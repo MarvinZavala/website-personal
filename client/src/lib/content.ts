@@ -82,9 +82,9 @@ export const content: Record<Language, Content> = {
       contact: "Contact",
     },
     hero: {
-      titlePart1: "App & Web Developer building",
-      titlePart2: "digital solutions",
-      subtitle: "I'm a high school developer passionate about creating intuitive apps and websites. Transforming complex problems into clean code.",
+      titlePart1: "Turning raw code into",
+      titlePart2: "real products",
+      subtitle: "I don't just write syntax; I build experiences. From local startups to AI art platforms, I create software that makes a difference.",
       stackTitle: "Tech Stack",
     },
     footer: {
@@ -227,9 +227,9 @@ export const content: Record<Language, Content> = {
       contact: "Contacto",
     },
     hero: {
-      titlePart1: "Desarrollador de Apps y Web creando",
-      titlePart2: "soluciones digitales",
-      subtitle: "Soy un desarrollador de preparatoria apasionado por crear aplicaciones y sitios web intuitivos. Transformando problemas complejos en código limpio.",
+      titlePart1: "Convirtiendo código en",
+      titlePart2: "productos reales",
+      subtitle: "No solo escribo sintaxis; construyo experiencias. Desde startups locales hasta plataformas de arte IA, creo software que marca la diferencia.",
       stackTitle: "Tech Stack",
     },
     footer: {
