@@ -105,21 +105,21 @@ export function ContactSection() {
               <div className="flex gap-4">
                 <SocialLink 
                   href={contact.socials.github} 
-                  icon={<SiGithub className="w-6 h-6" />} 
+                  icon={<SiGithub className="w-6 h-6 text-[#181717]" />} 
                   label="GitHub" 
-                  color="hover:text-white hover:bg-[#181717] hover:border-[#181717]"
+                  className="border-[#181717]/20 bg-[#181717]/5 hover:bg-[#181717]/10"
                 />
                 <SocialLink 
                   href={contact.socials.linkedin} 
-                  icon={<SiLinkedin className="w-6 h-6" />} 
+                  icon={<SiLinkedin className="w-6 h-6 text-[#0A66C2]" />} 
                   label="LinkedIn" 
-                  color="hover:text-white hover:bg-[#0A66C2] hover:border-[#0A66C2]"
+                  className="border-[#0A66C2]/20 bg-[#0A66C2]/5 hover:bg-[#0A66C2]/10"
                 />
                 <SocialLink 
                   href={contact.socials.instagram} 
-                  icon={<SiInstagram className="w-6 h-6" />} 
+                  icon={<SiInstagram className="w-6 h-6 text-[#E4405F]" />} 
                   label="Instagram" 
-                  color="hover:text-white hover:bg-[#E4405F] hover:border-[#E4405F]"
+                  className="border-[#E4405F]/20 bg-[#E4405F]/5 hover:bg-[#E4405F]/10"
                 />
               </div>
             </motion.div>
@@ -130,13 +130,13 @@ export function ContactSection() {
   );
 }
 
-function SocialLink({ href, icon, label, color }: { href: string; icon: React.ReactNode; label: string; color: string }) {
+function SocialLink({ href, icon, label, className }: { href: string; icon: React.ReactNode; label: string; className: string }) {
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`h-14 w-14 border border-border rounded-full flex items-center justify-center text-muted-foreground transition-all duration-300 ${color}`}
+      className={`h-14 w-14 border rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 ${className}`}
       aria-label={label}
     >
       {icon}
