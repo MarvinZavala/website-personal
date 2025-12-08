@@ -38,6 +38,7 @@ export interface Content {
     titlePart2: string;
     subtitle: string;
     stackTitle: string;
+    projectsTitle: string;
   };
   footer: {
     cta: string;
@@ -86,6 +87,7 @@ export const content: Record<Language, Content> = {
       titlePart2: "real products",
       subtitle: "I don't just write syntax; I build experiences. From local startups to AI art platforms, I create software that makes a difference.",
       stackTitle: "Tech Stack",
+      projectsTitle: "Projects I've Built",
     },
     footer: {
       cta: "Let's build something great.",
@@ -231,6 +233,7 @@ export const content: Record<Language, Content> = {
       titlePart2: "productos reales",
       subtitle: "No solo escribo sintaxis; construyo experiencias. Desde startups locales hasta plataformas de arte IA, creo software que marca la diferencia.",
       stackTitle: "Tech Stack",
+      projectsTitle: "Proyectos que he construido",
     },
     footer: {
       cta: "Construyamos algo genial.",
