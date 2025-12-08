@@ -5,6 +5,7 @@ import designSystemImage from "@assets/generated_images/design_system_documentat
 import profileImage from "@assets/generated_images/professional_headshot_of_product_designer.png";
 import localfyImage from "@assets/screenshot-1765160017897.png";
 import onlyPicImage from "@assets/screenshot-1765160140194.png";
+import negozappImage from "@assets/screenshot-1765218655116.png";
 
 export type Language = 'en' | 'es';
 
@@ -158,6 +159,23 @@ export const content: Record<Language, Content> = {
     },
     skills: ["React", "TypeScript", "Next.js", "Node.js", "Tailwind CSS", "React Native", "PostgreSQL", "Figma"],
     projects: [
+      {
+        id: "negozapp",
+        title: "Negozapp",
+        category: "SaaS • Business Tools",
+        image: negozappImage,
+        description: "All-in-one platform to digitize local businesses. Features digital catalogs, booking systems, invoicing, and an AI assistant for business insights.",
+        role: "Creator & Lead Developer",
+        year: "2025",
+        client: "Personal Project",
+        challenge: "Local businesses struggle with fragmented tools. The challenge was to unify inventory, sales, bookings, and AI insights into a single, easy-to-use platform optimized for the Central American market.",
+        solution: "Built a comprehensive SaaS solution with a React frontend and AI integration. Features include automated invoicing, real-time inventory management, and an AI assistant that learns from customer data.",
+        result: "Currently serving 150+ active businesses with over 10,000 invoices generated. Empowering local entrepreneurs with enterprise-level tools. 100% commission-free model.",
+        technologies: ["React", "Tailwind CSS", "AI Models", "Node.js", "PostgreSQL"],
+        links: {
+          live: "https://negozapp.com",
+        }
+      },
       {
         id: "onlypic",
         title: "OnlyPic.art",
@@ -322,6 +340,23 @@ export const content: Record<Language, Content> = {
     },
     skills: ["React", "TypeScript", "Next.js", "Node.js", "Tailwind CSS", "React Native", "PostgreSQL", "Figma"],
     projects: [
+      {
+        id: "negozapp",
+        title: "Negozapp",
+        category: "SaaS • Herramientas de Negocio",
+        image: negozappImage,
+        description: "Plataforma todo en uno para digitalizar negocios locales. Incluye catálogo digital, sistema de reservas, facturación y un asistente de IA.",
+        role: "Creador y Desarrollador Líder",
+        year: "2025",
+        client: "Proyecto Personal",
+        challenge: "Los negocios locales luchan con herramientas fragmentadas. El reto fue unificar inventario, ventas, reservas e IA en una sola plataforma fácil de usar y optimizada para Centroamérica.",
+        solution: "Desarrollé una solución SaaS integral con frontend en React e integración de IA. Incluye facturación automatizada, gestión de inventario en tiempo real y un asistente de IA inteligente.",
+        result: "Actualmente sirviendo a +150 negocios activos con más de 10,000 facturas generadas. Empoderando a emprendedores locales con herramientas de nivel empresarial sin comisiones.",
+        technologies: ["React", "Tailwind CSS", "AI Models", "Node.js", "PostgreSQL"],
+        links: {
+          live: "https://negozapp.com",
+        }
+      },
       {
         id: "onlypic",
         title: "OnlyPic.art",
