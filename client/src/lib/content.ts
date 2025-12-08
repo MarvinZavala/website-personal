@@ -8,6 +8,7 @@ import onlyPicImage from "@assets/screenshot-1765160140194.png";
 import negozappImage from "@assets/screenshot-1765218655116.png";
 import zummitImage from "@assets/screenshot-1765219186328.png";
 import strategikImage from "@assets/screenshot-1765219432817.png";
+import absPlumbingImage from "@assets/screenshot-1765219563334.png";
 
 export type Language = 'en' | 'es';
 
@@ -176,6 +177,23 @@ export const content: Record<Language, Content> = {
         technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "AI RAG", "TypeScript"],
         links: {
           live: "https://strategikagency.com",
+        }
+      },
+      {
+        id: "abs-plumbing",
+        title: "AB's Plumbing",
+        category: "Service Business • Local SEO",
+        image: absPlumbingImage,
+        description: "Professional business website for a Bay Area plumbing service. Focused on lead generation, trust building, and local SEO dominance.",
+        role: "Web Developer",
+        year: "2024",
+        client: "AB's Plumbing",
+        challenge: "The client needed to establish trust instantly and convert emergency visitors into calls. Local SEO competition in the Bay Area is extremely high.",
+        solution: "Designed a high-conversion landing page with clear CTAs, 'Licensed & Insured' trust signals, and a mobile-first layout for emergency users.",
+        result: "Generated over 500+ 5-star reviews and expanded service coverage to 16+ cities. Significant increase in emergency call volume.",
+        technologies: ["React", "Tailwind CSS", "Framer Motion", "SEO"],
+        links: {
+          live: "https://abs-plumbingservices.com",
         }
       },
       {
@@ -379,18 +397,35 @@ export const content: Record<Language, Content> = {
       {
         id: "strategik-agency",
         title: "Strategik Agency",
-        category: "Agency Website • Digital Marketing",
+        category: "Sitio Web de Agencia • Marketing Digital",
         image: strategikImage,
-        description: "Modern digital agency website featuring AI-powered solutions, automated workflows, and high-conversion landing pages for businesses in El Salvador.",
-        role: "Lead Developer",
+        description: "Sitio web moderno para agencia digital con soluciones de IA, flujos automatizados y páginas de alta conversión para negocios en El Salvador.",
+        role: "Desarrollador Líder",
         year: "2025",
         client: "Strategik Agency",
-        challenge: "The agency needed a high-performance website that could demonstrate their technical expertise in automation and AI while maintaining a 98% satisfaction rate.",
-        solution: "Built a lightning-fast site using Next.js with advanced animations and integrated lead generation forms. Features include an AI RAG chatbot demo and automated booking system.",
-        result: "The site achieves perfect Lighthouse scores and has helped over 500+ businesses digitize. The automated quoting system reduced response time to under 2 hours.",
+        challenge: "La agencia necesitaba un sitio de alto rendimiento que demostrara su experiencia técnica en automatización e IA manteniendo una tasa de satisfacción del 98%.",
+        solution: "Construí un sitio ultra rápido usando Next.js con animaciones avanzadas y formularios de generación de leads. Incluye demo de chatbot RAG y sistema de reservas.",
+        result: "El sitio logra puntuaciones perfectas en Lighthouse y ha ayudado a +500 negocios a digitalizarse. El sistema de cotización redujo el tiempo de respuesta a menos de 2 horas.",
         technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "AI RAG", "TypeScript"],
         links: {
           live: "https://strategikagency.com",
+        }
+      },
+      {
+        id: "abs-plumbing",
+        title: "AB's Plumbing",
+        category: "Negocio de Servicios • SEO Local",
+        image: absPlumbingImage,
+        description: "Sitio web profesional para servicio de plomería en el Área de la Bahía. Enfocado en generación de leads y dominio de SEO local.",
+        role: "Desarrollador Web",
+        year: "2024",
+        client: "AB's Plumbing",
+        challenge: "El cliente necesitaba generar confianza instantánea y convertir visitantes de emergencia en llamadas. La competencia de SEO local es muy alta.",
+        solution: "Diseñé una landing page de alta conversión con llamadas a la acción claras, señales de confianza y diseño mobile-first.",
+        result: "Generó más de 500+ reseñas de 5 estrellas y expandió la cobertura a 16+ ciudades. Aumento significativo en llamadas de emergencia.",
+        technologies: ["React", "Tailwind CSS", "Framer Motion", "SEO"],
+        links: {
+          live: "https://abs-plumbingservices.com",
         }
       },
       {
