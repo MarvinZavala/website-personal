@@ -8,8 +8,8 @@ interface ProjectsHeaderProps {
 
 export function ProjectsHeader({ title, subtitle }: ProjectsHeaderProps) {
   return (
-    <div className="relative mb-24 pt-10">
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+    <div className="relative mb-16 pt-20">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 relative z-10">
         <div className="relative">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -18,8 +18,8 @@ export function ProjectsHeader({ title, subtitle }: ProjectsHeaderProps) {
             transition={{ duration: 0.5 }}
             className="flex items-center gap-3 mb-4"
           >
-            <span className="flex h-px w-12 bg-primary/30" />
-            <span className="text-sm font-medium uppercase tracking-widest text-muted-foreground">
+            <span className="flex h-px w-12 bg-accent/70" />
+            <span className="text-sm font-bold uppercase tracking-[0.2em] text-accent">
               {subtitle}
             </span>
           </motion.div>
@@ -29,10 +29,10 @@ export function ProjectsHeader({ title, subtitle }: ProjectsHeaderProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="font-serif text-5xl md:text-7xl text-foreground leading-[1.1]"
+            className="font-sans font-bold text-5xl md:text-7xl text-white leading-none tracking-tight"
           >
             {title.split(" ").map((word, i) => (
-              <span key={i} className="inline-block mr-3">
+              <span key={i} className="inline-block mr-3 drop-shadow-lg">
                 {word}
               </span>
             ))}
@@ -44,9 +44,12 @@ export function ProjectsHeader({ title, subtitle }: ProjectsHeaderProps) {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="hidden md:flex h-24 w-24 rounded-full border border-border items-center justify-center shrink-0 group hover:border-primary/50 transition-colors"
+          className="hidden md:flex flex-col items-end gap-2"
         >
-          <ArrowDownRight className="w-8 h-8 text-muted-foreground group-hover:text-primary transition-colors group-hover:rotate-45 transform duration-500" />
+          <p className="text-right text-muted-foreground text-sm max-w-[200px]">
+            Explorer my recent digital craft & engineering.
+          </p>
+          <div className="h-2 w-20 bg-primary rounded-full mt-2" />
         </motion.div>
       </div>
 
@@ -55,11 +58,11 @@ export function ProjectsHeader({ title, subtitle }: ProjectsHeaderProps) {
         whileInView={{ scaleX: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1, delay: 0.2, ease: "circOut" }}
-        className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-primary/50 via-border to-transparent mt-12 opacity-50"
+        className="absolute bottom-[-20px] left-0 right-0 h-px bg-gradient-to-r from-primary via-accent to-transparent opacity-30"
       />
-      
+
       {/* Decorative background element */}
-      <div className="absolute -top-20 -left-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10 pointer-events-none" />
+      <div className="absolute -top-32 -left-20 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] -z-10 pointer-events-none" />
     </div>
   );
 }

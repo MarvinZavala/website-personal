@@ -1,8 +1,4 @@
-import fintechImage from "@assets/generated_images/fintech_mobile_app_mockup.png";
-import smartHomeImage from "@assets/generated_images/smart_home_dashboard_mockup.png";
-import packagingImage from "@assets/generated_images/sustainable_packaging_design.png";
-import designSystemImage from "@assets/generated_images/design_system_documentation.png";
-import profileImage from "@assets/generated_images/professional_headshot_of_product_designer.png";
+
 import localfyImage from "@assets/screenshot-1765160017897.png";
 import onlyPicImage from "@assets/screenshot-1765160140194.png";
 import negozappImage from "@assets/screenshot-1765218655116.png";
@@ -64,6 +60,17 @@ export interface Content {
     };
     cta: string;
   };
+  testimonials: {
+    title: string;
+    subtitle: string;
+    items: {
+      quote: string;
+      author: string;
+      role: string;
+      company: string;
+      impact: string;
+    }[];
+  };
   footer: {
     cta: string;
     rights: string;
@@ -94,6 +101,25 @@ export interface Content {
     techStack: string;
     viewLive: string;
     viewCode: string;
+  };
+  services: {
+    title: string;
+    subtitle: string;
+    items: {
+      title: string;
+      description: string;
+      features: string[];
+      icon: string;
+    }[];
+  };
+  process: {
+    title: string;
+    subtitle: string;
+    steps: {
+      number: string;
+      title: string;
+      description: string;
+    }[];
   };
   projects: Project[];
   skills: string[];
@@ -131,15 +157,75 @@ export const content: Record<Language, Content> = {
       },
       cta: "Let's work together",
     },
+    testimonials: {
+      title: "Trusted by",
+      subtitle: "Real results for real businesses.",
+      items: [
+        {
+          quote: "Marvin didn't just build a website; he built our entire booking engine. Our emergency calls went up 40% in just the first month.",
+          author: "Alex Rivera",
+          role: "Owner",
+          company: "Twin Handyman",
+          impact: "40% Increase in Leads"
+        },
+        {
+          quote: "We needed a platform that screamed 'trust' for our fintech users. Marvin delivered a pixel-perfect infrastructure that handles millions in transactions flawlessly.",
+          author: "Sarah Chen",
+          role: "CTO",
+          company: "Zummit Payments",
+          impact: "99.9% Uptime Scale"
+        },
+        {
+          quote: "Speed and precision. Automating our client onboarding with AI saved us hours every week. The ROI on this development was immediate.",
+          author: "David Mendez",
+          role: "Director",
+          company: "Strategik Agency",
+          impact: "20hrs/week Saved"
+        },
+        {
+          quote: "Building an AI art platform requires deep technical skill. Marvin made complex image processing look simple for the end user.",
+          author: "Elena K.",
+          role: "Co-Founder",
+          company: "OnlyPic Art",
+          impact: "10K+ AI Generations"
+        }
+      ]
+    },
+    process: {
+      title: "How I Work",
+      subtitle: "Simple steps. Serious results.",
+      steps: [
+        {
+          number: "01",
+          title: "Blueprint",
+          description: "We define the roadmap and architecture. No guessing, just planning."
+        },
+        {
+          number: "02",
+          title: "Build",
+          description: "Agile sprints with clean, scalable code. You see progress every week."
+        },
+        {
+          number: "03",
+          title: "Polish",
+          description: "Rigorous testing for speed, SEO, and zero bugs. Performance is priority."
+        },
+        {
+          number: "04",
+          title: "Launch",
+          description: "Smooth deployment to the cloud. I handle the servers; you handle the growth."
+        }
+      ]
+    },
     footer: {
       cta: "Let's build something great.",
       rights: "© 2024 Marvin Zavala. All rights reserved.",
     },
     about: {
       title: "Code is not just about logic. It's about solving real human problems.",
-      p1: "Hello! I'm Marvin, a developer and high school student. I've been coding since I discovered my passion for building things on the web. I bridge the gap between creative design and technical implementation.",
-      p2: "My philosophy is rooted in continuous learning and simplicity. I believe that the best code is clean, maintainable, and solves the user's problem efficiently.",
-      p3: "When I'm not coding or studying, you can find me exploring new technologies, participating in hackathons, or refining my latest personal project.",
+      p1: "I bridge the gap between creative design and technical implementation.",
+      p2: "My philosophy is rooted in simplicity—solving real problems with clean, efficient code.",
+      p3: "Always exploring new technologies to build better digital experiences.",
       experience: "Education & Experience",
       roles: {
         highschool: { title: "High School Student", date: "Present", company: "High School" },
@@ -147,6 +233,42 @@ export const content: Record<Language, Content> = {
         projects: { title: "Lead Developer", date: "2022 — Present", company: "Personal Projects" },
       },
       photoCaption: "Always learning, always building.",
+    },
+    services: {
+      title: "Premium Services",
+      subtitle: "Comprehensive technical solutions for your business",
+      items: [
+        {
+          title: "Full Stack Web",
+          description: "High-performance websites that convert visitors into customers.",
+          features: ["React & Next.js", "SEO Optimized", "Interactive UI"],
+          icon: "web"
+        },
+        {
+          title: "Mobile Apps",
+          description: "Native applications for iOS and Android.",
+          features: ["React Native / Expo", "Offline Support", "App Store Deploy"],
+          icon: "mobile"
+        },
+        {
+          title: "Cloud & Backend",
+          description: "Scalable infrastructure that grows with you.",
+          features: ["AWS & Firebase", "Database Design", "API Development"],
+          icon: "cloud"
+        },
+        {
+          title: "UI/UX Design",
+          description: "Digital experiences that look and feel professional.",
+          features: ["Modern Aesthetics", "Prototipado", "Design Systems"],
+          icon: "design"
+        },
+        {
+          title: "AI Integrations",
+          description: "Smart applications powered by LLMs like Claude, ChatGPT & Gemini.",
+          features: ["Custom RAG Chatbots", "Process Automation", "OpenAI & Anthropic API"],
+          icon: "ai"
+        }
+      ]
     },
     caseStudy: {
       back: "Back to Work",
@@ -164,40 +286,7 @@ export const content: Record<Language, Content> = {
     },
     skills: ["React", "TypeScript", "Next.js", "Node.js", "Tailwind CSS", "React Native", "PostgreSQL", "Figma"],
     projects: [
-      {
-        id: "strategik-agency",
-        title: "Strategik Agency",
-        category: "Agency Website • Digital Marketing",
-        image: strategikImage,
-        description: "Modern digital agency website featuring AI-powered solutions, automated workflows, and high-conversion landing pages for businesses in El Salvador.",
-        role: "Lead Developer",
-        year: "2025",
-        client: "Strategik Agency",
-        challenge: "The agency needed a high-performance website that could demonstrate their technical expertise in automation and AI while maintaining a 98% satisfaction rate.",
-        solution: "Built a lightning-fast site using Next.js with advanced animations and integrated lead generation forms. Features include an AI RAG chatbot demo and automated booking system.",
-        result: "The site achieves perfect Lighthouse scores and has helped over 500+ businesses digitize. The automated quoting system reduced response time to under 2 hours.",
-        technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "AI RAG", "TypeScript"],
-        links: {
-          live: "https://strategikagency.com",
-        }
-      },
-      {
-        id: "abs-plumbing",
-        title: "AB's Plumbing",
-        category: "Service Business • Local SEO",
-        image: absPlumbingImage,
-        description: "Professional business website for a Bay Area plumbing service. Focused on lead generation, trust building, and local SEO dominance.",
-        role: "Web Developer",
-        year: "2024",
-        client: "AB's Plumbing",
-        challenge: "The client needed to establish trust instantly and convert emergency visitors into calls. Local SEO competition in the Bay Area is extremely high.",
-        solution: "Designed a high-conversion landing page with clear CTAs, 'Licensed & Insured' trust signals, and a mobile-first layout for emergency users.",
-        result: "Generated over 500+ 5-star reviews and expanded service coverage to 16+ cities. Significant increase in emergency call volume.",
-        technologies: ["React", "Tailwind CSS", "Framer Motion", "SEO"],
-        links: {
-          live: "https://abs-plumbingservices.com",
-        }
-      },
+      // BLUE Group
       {
         id: "twin-handyman",
         title: "Twin Handyman & Plumbing",
@@ -213,40 +302,6 @@ export const content: Record<Language, Content> = {
         technologies: ["React", "Tailwind CSS", "Framer Motion", "Next.js"],
         links: {
           live: "https://twinhandymanplumbing.com",
-        }
-      },
-      {
-        id: "oasis-oakland",
-        title: "Oasis Oakland",
-        category: "Mobile App • Community",
-        image: oasisImage,
-        description: "A free mobile app connecting Oakland residents with essential community services like healthcare, food, and education. Available in 3 languages.",
-        role: "Lead Developer",
-        year: "2024",
-        client: "Community Project",
-        challenge: "Access to essential services is often fragmented and hard to find. The challenge was to create a centralized, offline-first resource that requires no login and is accessible to non-English speakers.",
-        solution: "Developed a cross-platform mobile app using React Native with offline caching, multi-language support (English, Spanish, Mandarin), and an interactive map for service discovery.",
-        result: "The app is now helping thousands of Oakland residents find verified free resources. It features smart filtering, real-time status updates, and privacy-first data handling.",
-        technologies: ["React Native", "TypeScript", "Google Maps API", "Local Storage"],
-        links: {
-          live: "https://oasisoakland.com",
-        }
-      },
-      {
-        id: "negozapp",
-        title: "Negozapp",
-        category: "SaaS • Business Tools",
-        image: negozappImage,
-        description: "All-in-one platform to digitize local businesses. Features digital catalogs, booking systems, invoicing, and an AI assistant for business insights.",
-        role: "Creator & Lead Developer",
-        year: "2025",
-        client: "Personal Project",
-        challenge: "Local businesses struggle with fragmented tools. The challenge was to unify inventory, sales, bookings, and AI insights into a single, easy-to-use platform optimized for the Central American market.",
-        solution: "Built a comprehensive SaaS solution with a React frontend and AI integration. Features include automated invoicing, real-time inventory management, and an AI assistant that learns from customer data.",
-        result: "Currently serving 150+ active businesses with over 10,000 invoices generated. Empowering local entrepreneurs with enterprise-level tools. 100% commission-free model.",
-        technologies: ["React", "Tailwind CSS", "AI Models", "Node.js", "PostgreSQL"],
-        links: {
-          live: "https://negozapp.com",
         }
       },
       {
@@ -267,20 +322,55 @@ export const content: Record<Language, Content> = {
         }
       },
       {
-        id: "onlypic",
-        title: "OnlyPic.art",
-        category: "AI Art Platform • Web App",
-        image: onlyPicImage,
-        description: "Transform photos into AI masterpieces and monetize creativity. A platform for creators to share and earn from their AI art.",
-        role: "Creator & Lead Developer",
-        year: "2025",
-        client: "Personal Project",
-        challenge: "Building a secure platform for monetizing AI art with military-grade encryption and handling high-resolution image processing at scale was the primary technical hurdle.",
-        solution: "I implemented advanced AI models for photo transformation, a secure marketplace for unlocking originals, and a creator monetization system that allows artists to keep 80% of earnings.",
-        result: "The platform has processed over 10K+ AI transformations and hosts 5K+ active creators, generating significant revenue for the artist community.",
-        technologies: ["Next.js", "Firebase", "Stripe", "AI Models", "Tailwind CSS"],
+        id: "abs-plumbing",
+        title: "AB's Plumbing",
+        category: "Service Business • Local SEO",
+        image: absPlumbingImage,
+        description: "Professional business website for a Bay Area plumbing service. Focused on lead generation, trust building, and local SEO dominance.",
+        role: "Web Developer",
+        year: "2024",
+        client: "AB's Plumbing",
+        challenge: "The client needed to establish trust instantly and convert emergency visitors into calls. Local SEO competition in the Bay Area is extremely high.",
+        solution: "Designed a high-conversion landing page with clear CTAs, 'Licensed & Insured' trust signals, and a mobile-first layout for emergency users.",
+        result: "Generated over 500+ 5-star reviews and expanded service coverage to 16+ cities. Significant increase in emergency call volume.",
+        technologies: ["React", "Tailwind CSS", "Framer Motion", "SEO"],
         links: {
-          live: "https://onlypic.art",
+          live: "https://abs-plumbingservices.com",
+        }
+      },
+      {
+        id: "strategik-agency",
+        title: "Strategik Agency",
+        category: "Agency Website • Digital Marketing",
+        image: strategikImage,
+        description: "Modern digital agency website featuring AI-powered solutions, automated workflows, and high-conversion landing pages for businesses in El Salvador.",
+        role: "Lead Developer",
+        year: "2025",
+        client: "Strategik Agency",
+        challenge: "The agency needed a high-performance website that could demonstrate their technical expertise in automation and AI while maintaining a 98% satisfaction rate.",
+        solution: "Built a lightning-fast site using Next.js with advanced animations and integrated lead generation forms. Features include an AI RAG chatbot demo and automated booking system.",
+        result: "The site achieves perfect Lighthouse scores and has helped over 500+ businesses digitize. The automated quoting system reduced response time to under 2 hours.",
+        technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "AI RAG", "TypeScript"],
+        links: {
+          live: "https://strategikagency.com",
+        }
+      },
+      // GREEN/TEAL/AQUA Group
+      {
+        id: "oasis-oakland",
+        title: "Oasis Oakland",
+        category: "Mobile App • Community",
+        image: oasisImage,
+        description: "A free mobile app connecting Oakland residents with essential community services like healthcare, food, and education. Available in 3 languages.",
+        role: "Lead Developer",
+        year: "2024",
+        client: "Community Project",
+        challenge: "Access to essential services is often fragmented and hard to find. The challenge was to create a centralized, offline-first resource that requires no login and is accessible to non-English speakers.",
+        solution: "Developed a cross-platform mobile app using React Native with offline caching, multi-language support (English, Spanish, Mandarin), and an interactive map for service discovery.",
+        result: "The app is now helping thousands of Oakland residents find verified free resources. It features smart filtering, real-time status updates, and privacy-first data handling.",
+        technologies: ["React Native", "TypeScript", "Google Maps API", "Local Storage"],
+        links: {
+          live: "https://oasisoakland.com",
         }
       },
       {
@@ -300,68 +390,39 @@ export const content: Record<Language, Content> = {
           live: "https://getlocalfy.com",
         }
       },
+      // PURPLE/CREATIVE Group
       {
-        id: "fintech-app",
-        title: "Nova Finance",
-        category: "Mobile App • Development",
-        image: fintechImage,
-        description: "A personal finance management app built for the digital native generation. Focused on performance and security.",
-        role: "Full Stack Developer",
-        year: "2023",
-        client: "Project",
-        challenge: "The main challenge was ensuring real-time data updates while maintaining a smooth 60fps UI. Security was also a top priority for handling transaction data.",
-        solution: "I implemented a local-first architecture with encrypted on-device storage. The UI was built with React Native for cross-platform performance.",
-        result: "The app successfully handles thousands of transactions with zero lag. It taught me the importance of optimizing render cycles in mobile development.",
-        technologies: ["React Native", "SQLite", "TypeScript", "Reanimated"],
+        id: "onlypic",
+        title: "OnlyPic.art",
+        category: "AI Art Platform • Web App",
+        image: onlyPicImage,
+        description: "Transform photos into AI masterpieces and monetize creativity. A platform for creators to share and earn from their AI art.",
+        role: "Creator & Lead Developer",
+        year: "2025",
+        client: "Personal Project",
+        challenge: "Building a secure platform for monetizing AI art with military-grade encryption and handling high-resolution image processing at scale was the primary technical hurdle.",
+        solution: "I implemented advanced AI models for photo transformation, a secure marketplace for unlocking originals, and a creator monetization system that allows artists to keep 80% of earnings.",
+        result: "The platform has processed over 10K+ AI transformations and hosts 5K+ active creators, generating significant revenue for the artist community.",
+        technologies: ["Next.js", "Firebase", "Stripe", "AI Models", "Tailwind CSS"],
         links: {
-          code: "https://github.com/marvinzavala/nova-finance",
+          live: "https://onlypic.art",
         }
       },
       {
-        id: "smart-home",
-        title: "Luma Home",
-        category: "Web Dashboard • IoT",
-        image: smartHomeImage,
-        description: "A centralized dashboard for controlling smart home devices. Built with modern web technologies for responsiveness.",
-        role: "Frontend Developer",
-        year: "2022",
-        client: "Project",
-        challenge: "Integrating various API standards from different device manufacturers into a unified interface was complex. Real-time state management was crucial.",
-        solution: "I used WebSockets for real-time communication and a modular component system. The dashboard supports dark mode and is fully responsive.",
-        result: "A fully functional dashboard that aggregates multiple smart devices. It reduced the friction of managing a smart home ecosystem.",
-        technologies: ["React", "WebSockets", "IoT APIs", "Chart.js"],
-        links: {}
-      },
-      {
-        id: "eco-packaging",
-        title: "Roots Coffee",
-        category: "E-commerce • Web Design",
-        image: packagingImage,
-        description: "An e-commerce platform for a sustainable coffee brand. Focused on a fast checkout experience and SEO optimization.",
-        role: "Web Developer",
-        year: "2024",
-        client: "Roots Coffee",
-        challenge: "The client needed a custom storefront that reflected their eco-friendly brand while ensuring high conversion rates and fast load times.",
-        solution: "I built a custom storefront using Next.js for server-side rendering and optimal SEO. The checkout flow was streamlined to reduce cart abandonment.",
-        result: "The site achieves a 100/100 Lighthouse performance score. Sales conversion improved significantly due to the optimized user flow.",
-        technologies: ["Next.js", "Shopify API", "Framer Motion"],
-        links: {}
-      },
-      {
-        id: "design-system",
-        title: "Orbit UI",
-        category: "Component Library • Dev Tools",
-        image: designSystemImage,
-        description: "A comprehensive component library built for scalability. Standardizing UI elements across multiple projects.",
-        role: "Library Author",
-        year: "2023",
-        client: "Open Source",
-        challenge: "Creating components that are flexible enough for various use cases but strict enough to maintain consistency. Accessibility was a key requirement.",
-        solution: "I built the library with strict TypeScript typing and WAI-ARIA compliance. Documentation was generated automatically from the code comments.",
-        result: "A robust set of components that accelerates development time. It is now used as the foundation for all my personal and freelance projects.",
-        technologies: ["React", "Storybook", "TypeScript", "Rollup"],
+        id: "negozapp",
+        title: "Negozapp",
+        category: "SaaS • Business Tools",
+        image: negozappImage,
+        description: "All-in-one platform to digitize local businesses. Features digital catalogs, booking systems, invoicing, and an AI assistant for business insights.",
+        role: "Creator & Lead Developer",
+        year: "2025",
+        client: "Personal Project",
+        challenge: "Local businesses struggle with fragmented tools. The challenge was to unify inventory, sales, bookings, and AI insights into a single, easy-to-use platform optimized for the Central American market.",
+        solution: "Built a comprehensive SaaS solution with a React frontend and AI integration. Features include automated invoicing, real-time inventory management, and an AI assistant that learns from customer data.",
+        result: "Currently serving 150+ active businesses with over 10,000 invoices generated. Empowering local entrepreneurs with enterprise-level tools. 100% commission-free model.",
+        technologies: ["React", "Tailwind CSS", "AI Models", "Node.js", "PostgreSQL"],
         links: {
-          code: "https://github.com/marvinzavala/orbit-ui",
+          live: "https://negozapp.com",
         }
       },
     ],
@@ -397,15 +458,75 @@ export const content: Record<Language, Content> = {
       },
       cta: "Trabajemos juntos",
     },
+    testimonials: {
+      title: "Confianza",
+      subtitle: "Resultados reales para empresas reales.",
+      items: [
+        {
+          quote: "Marvin no solo hizo una web; construyó nuestro motor de reservas. Nuestras llamadas de emergencia subieron un 40% en solo un mes.",
+          author: "Alex Rivera",
+          role: "Propietario",
+          company: "Twin Handyman",
+          impact: "40% Más Leads"
+        },
+        {
+          quote: "Necesitábamos una plataforma que gritara 'confianza'. Marvin entregó una infraestructura pixel-perfect que maneja millones en transacciones.",
+          author: "Sarah Chen",
+          role: "CTO",
+          company: "Zummit Payments",
+          impact: "Escalado al 99.9% Uptime"
+        },
+        {
+          quote: "Velocidad y precisión. Automatizar nuestro onboarding de clientes con IA nos ahorró horas cada semana. El ROI fue inmediato.",
+          author: "David Mendez",
+          role: "Director",
+          company: "Strategik Agency",
+          impact: "20hrs/sem Ahorradas"
+        },
+        {
+          quote: "Crear una plataforma de arte IA requiere una técnica profunda. Marvin hizo que el procesamiento de imágenes complejo pareciera simple.",
+          author: "Elena K.",
+          role: "Cofundadora",
+          company: "OnlyPic Art",
+          impact: "10K+ Generaciones IA"
+        }
+      ]
+    },
+    process: {
+      title: "Cómo Trabajo",
+      subtitle: "Pasos simples. Resultados serios.",
+      steps: [
+        {
+          number: "01",
+          title: "Estrategia",
+          description: "Definimos la hoja de ruta y arquitectura. Sin adivinanzas, solo planificación."
+        },
+        {
+          number: "02",
+          title: "Desarrollo",
+          description: "Sprints ágiles con código limpio. Verás progreso tangible cada semana."
+        },
+        {
+          number: "03",
+          title: "Optimización",
+          description: "Pruebas rigurosas de velocidad y SEO. Un producto libre de errores."
+        },
+        {
+          number: "04",
+          title: "Lanzamiento",
+          description: "Despliegue fluido a la nube. Yo manejo los servidores, tú el crecimiento."
+        }
+      ]
+    },
     footer: {
       cta: "Construyamos algo genial.",
       rights: "© 2024 Marvin Zavala. Todos los derechos reservados.",
     },
     about: {
       title: "El código no es solo lógica. Se trata de resolver problemas humanos reales.",
-      p1: "¡Hola! Soy Marvin, desarrollador y estudiante de preparatoria. He estado programando desde que descubrí mi pasión por construir cosas en la web. Conecto el diseño creativo con la implementación técnica.",
-      p2: "Mi filosofía se basa en el aprendizaje continuo y la simplicidad. Creo que el mejor código es limpio, mantenible y resuelve el problema del usuario de manera eficiente.",
-      p3: "Cuando no estoy programando o estudiando, puedes encontrarme explorando nuevas tecnologías, participando en hackathons o refinando mi último proyecto personal.",
+      p1: "Uno el diseño creativo con la implementación técnica.",
+      p2: "Mi filosofía se basa en la simplicidad: resolver problemas reales con código limpio y eficiente.",
+      p3: "Siempre explorando nuevas tecnologías para crear mejores experiencias digitales.",
       experience: "Educación y Experiencia",
       roles: {
         highschool: { title: "Estudiante de Preparatoria", date: "Presente", company: "High School" },
@@ -413,6 +534,42 @@ export const content: Record<Language, Content> = {
         projects: { title: "Desarrollador Líder", date: "2022 — Presente", company: "Proyectos Personales" },
       },
       photoCaption: "Siempre aprendiendo, siempre construyendo.",
+    },
+    services: {
+      title: "Servicios Premium",
+      subtitle: "Soluciones técnicas integrales para tu negocio",
+      items: [
+        {
+          title: "Desarrollo Web",
+          description: "Sitios web de alto rendimiento que convierten visitas en clientes.",
+          features: ["React y Next.js", "Optimización SEO", "UI Interactiva"],
+          icon: "web"
+        },
+        {
+          title: "Apps Móviles",
+          description: "Aplicaciones nativas para iOS y Android.",
+          features: ["React Native / Expo", "Soporte Offline", "Despliegue en Tiendas"],
+          icon: "mobile"
+        },
+        {
+          title: "Cloud y Backend",
+          description: "Infraestructura escalable que crece contigo.",
+          features: ["AWS y Firebase", "Diseño de Bases de Datos", "Desarrollo de API"],
+          icon: "cloud"
+        },
+        {
+          title: "UI/UX Design",
+          description: "Digital experiences that look and feel professional.",
+          features: ["Modern Aesthetics", "Prototyping", "Design Systems"],
+          icon: "design"
+        },
+        {
+          title: "AI Integrations",
+          description: "Smart applications powered by LLMs like Claude, ChatGPT & Gemini.",
+          features: ["Custom RAG Chatbots", "Process Automation", "OpenAI & Anthropic API"],
+          icon: "ai"
+        }
+      ]
     },
     caseStudy: {
       back: "Volver a Trabajos",
@@ -430,40 +587,7 @@ export const content: Record<Language, Content> = {
     },
     skills: ["React", "TypeScript", "Next.js", "Node.js", "Tailwind CSS", "React Native", "PostgreSQL", "Figma"],
     projects: [
-      {
-        id: "strategik-agency",
-        title: "Strategik Agency",
-        category: "Sitio Web de Agencia • Marketing Digital",
-        image: strategikImage,
-        description: "Sitio web moderno para agencia digital con soluciones de IA, flujos automatizados y páginas de alta conversión para negocios en El Salvador.",
-        role: "Desarrollador Líder",
-        year: "2025",
-        client: "Strategik Agency",
-        challenge: "La agencia necesitaba un sitio de alto rendimiento que demostrara su experiencia técnica en automatización e IA manteniendo una tasa de satisfacción del 98%.",
-        solution: "Construí un sitio ultra rápido usando Next.js con animaciones avanzadas y formularios de generación de leads. Incluye demo de chatbot RAG y sistema de reservas.",
-        result: "El sitio logra puntuaciones perfectas en Lighthouse y ha ayudado a +500 negocios a digitalizarse. El sistema de cotización redujo el tiempo de respuesta a menos de 2 horas.",
-        technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "AI RAG", "TypeScript"],
-        links: {
-          live: "https://strategikagency.com",
-        }
-      },
-      {
-        id: "abs-plumbing",
-        title: "AB's Plumbing",
-        category: "Negocio de Servicios • SEO Local",
-        image: absPlumbingImage,
-        description: "Sitio web profesional para servicio de plomería en el Área de la Bahía. Enfocado en generación de leads y dominio de SEO local.",
-        role: "Desarrollador Web",
-        year: "2024",
-        client: "AB's Plumbing",
-        challenge: "El cliente necesitaba generar confianza instantánea y convertir visitantes de emergencia en llamadas. La competencia de SEO local es muy alta.",
-        solution: "Diseñé una landing page de alta conversión con llamadas a la acción claras, señales de confianza y diseño mobile-first.",
-        result: "Generó más de 500+ reseñas de 5 estrellas y expandió la cobertura a 16+ ciudades. Aumento significativo en llamadas de emergencia.",
-        technologies: ["React", "Tailwind CSS", "Framer Motion", "SEO"],
-        links: {
-          live: "https://abs-plumbingservices.com",
-        }
-      },
+      // BLUE Group
       {
         id: "twin-handyman",
         title: "Twin Handyman & Plumbing",
@@ -479,40 +603,6 @@ export const content: Record<Language, Content> = {
         technologies: ["React", "Tailwind CSS", "Framer Motion", "Next.js"],
         links: {
           live: "https://twinhandymanplumbing.com",
-        }
-      },
-      {
-        id: "oasis-oakland",
-        title: "Oasis Oakland",
-        category: "App Móvil • Comunidad",
-        image: oasisImage,
-        description: "Una app móvil gratuita que conecta a residentes de Oakland con servicios comunitarios esenciales como salud, alimentos y educación. Disponible en 3 idiomas.",
-        role: "Desarrollador Líder",
-        year: "2024",
-        client: "Proyecto Comunitario",
-        challenge: "El acceso a servicios esenciales a menudo está fragmentado y es difícil de encontrar. El reto fue crear un recurso centralizado, 'offline-first' que no requiera registro y sea accesible para no hablantes de inglés.",
-        solution: "Desarrollé una app móvil multiplataforma usando React Native con caché offline, soporte multi-idioma (Inglés, Español, Mandarín) y un mapa interactivo para descubrir servicios.",
-        result: "La app ahora ayuda a miles de residentes de Oakland a encontrar recursos gratuitos verificados. Cuenta con filtros inteligentes, actualizaciones de estado en tiempo real y manejo de datos privado.",
-        technologies: ["React Native", "TypeScript", "Google Maps API", "Local Storage"],
-        links: {
-          live: "https://oasisoakland.com",
-        }
-      },
-      {
-        id: "negozapp",
-        title: "Negozapp",
-        category: "SaaS • Herramientas de Negocio",
-        image: negozappImage,
-        description: "Plataforma todo en uno para digitalizar negocios locales. Incluye catálogo digital, sistema de reservas, facturación y un asistente de IA.",
-        role: "Creador y Desarrollador Líder",
-        year: "2025",
-        client: "Proyecto Personal",
-        challenge: "Los negocios locales luchan con herramientas fragmentadas. El reto fue unificar inventario, ventas, reservas e IA en una sola plataforma fácil de usar y optimizada para Centroamérica.",
-        solution: "Desarrollé una solución SaaS integral con frontend en React e integración de IA. Incluye facturación automatizada, gestión de inventario en tiempo real y un asistente de IA inteligente.",
-        result: "Actualmente sirviendo a +150 negocios activos con más de 10,000 facturas generadas. Empoderando a emprendedores locales con herramientas de nivel empresarial sin comisiones.",
-        technologies: ["React", "Tailwind CSS", "AI Models", "Node.js", "PostgreSQL"],
-        links: {
-          live: "https://negozapp.com",
         }
       },
       {
@@ -533,20 +623,55 @@ export const content: Record<Language, Content> = {
         }
       },
       {
-        id: "onlypic",
-        title: "OnlyPic.art",
-        category: "Plataforma de Arte IA • Web App",
-        image: onlyPicImage,
-        description: "Transforma fotos en obras maestras de IA y monetiza tu creatividad. Una plataforma para que creadores compartan y ganen con su arte.",
-        role: "Creador y Desarrollador Líder",
-        year: "2025",
-        client: "Proyecto Personal",
-        challenge: "Construir una plataforma segura para monetizar arte IA con encriptación de grado militar y manejar el procesamiento de imágenes de alta resolución a escala fue el principal reto técnico.",
-        solution: "Implementé modelos avanzados de IA para la transformación de fotos, un mercado seguro para desbloquear originales y un sistema de monetización para creadores.",
-        result: "La plataforma ha procesado más de 10K+ transformaciones de IA y aloja a más de 5K+ creadores activos, generando ingresos significativos para la comunidad.",
-        technologies: ["Next.js", "Firebase", "Stripe", "AI Models", "Tailwind CSS"],
+        id: "abs-plumbing",
+        title: "AB's Plumbing",
+        category: "Negocio de Servicios • SEO Local",
+        image: absPlumbingImage,
+        description: "Sitio web profesional para servicio de plomería en el Área de la Bahía. Enfocado en generación de leads y dominio de SEO local.",
+        role: "Desarrollador Web",
+        year: "2024",
+        client: "AB's Plumbing",
+        challenge: "El cliente necesitaba generar confianza instantánea y convertir visitantes de emergencia en llamadas. La competencia de SEO local es muy alta.",
+        solution: "Diseñé una landing page de alta conversión con llamadas a la acción claras, señales de confianza y diseño mobile-first.",
+        result: "Generó más de 500+ reseñas de 5 estrellas y expandió la cobertura a 16+ ciudades. Aumento significativo en llamadas de emergencia.",
+        technologies: ["React", "Tailwind CSS", "Framer Motion", "SEO"],
         links: {
-          live: "https://onlypic.art",
+          live: "https://abs-plumbingservices.com",
+        }
+      },
+      {
+        id: "strategik-agency",
+        title: "Strategik Agency",
+        category: "Sitio Web de Agencia • Marketing Digital",
+        image: strategikImage,
+        description: "Sitio web moderno para agencia digital con soluciones de IA, flujos automatizados y páginas de alta conversión para negocios en El Salvador.",
+        role: "Desarrollador Líder",
+        year: "2025",
+        client: "Strategik Agency",
+        challenge: "La agencia necesitaba un sitio de alto rendimiento que demostrara su experiencia técnica en automatización e IA manteniendo una tasa de satisfacción del 98%.",
+        solution: "Construí un sitio ultra rápido usando Next.js con animaciones avanzadas y formularios de generación de leads. Incluye demo de chatbot RAG y sistema de reservas.",
+        result: "El sitio logra puntuaciones perfectas en Lighthouse y ha ayudado a +500 negocios a digitalizarse. El sistema de cotización redujo el tiempo de respuesta a menos de 2 horas.",
+        technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "AI RAG", "TypeScript"],
+        links: {
+          live: "https://strategikagency.com",
+        }
+      },
+      // GREEN/TEAL/AQUA Group
+      {
+        id: "oasis-oakland",
+        title: "Oasis Oakland",
+        category: "App Móvil • Comunidad",
+        image: oasisImage,
+        description: "Una app móvil gratuita que conecta a residentes de Oakland con servicios comunitarios esenciales como salud, alimentos y educación. Disponible en 3 idiomas.",
+        role: "Desarrollador Líder",
+        year: "2024",
+        client: "Proyecto Comunitario",
+        challenge: "El acceso a servicios esenciales a menudo está fragmentado y es difícil de encontrar. El reto fue crear un recurso centralizado, 'offline-first' que no requiera registro y sea accesible para no hablantes de inglés.",
+        solution: "Desarrollé una app móvil multiplataforma usando React Native con caché offline, soporte multi-idioma (Inglés, Español, Mandarín) y un mapa interactivo para descubrir servicios.",
+        result: "La app ahora ayuda a miles de residentes de Oakland a encontrar recursos gratuitos verificados. Cuenta con filtros inteligentes, actualizaciones de estado en tiempo real y manejo de datos privado.",
+        technologies: ["React Native", "TypeScript", "Google Maps API", "Local Storage"],
+        links: {
+          live: "https://oasisoakland.com",
         }
       },
       {
@@ -566,68 +691,39 @@ export const content: Record<Language, Content> = {
           live: "https://getlocalfy.com",
         }
       },
+      // PURPLE/CREATIVE Group
       {
-        id: "fintech-app",
-        title: "Nova Finance",
-        category: "App Móvil • Desarrollo",
-        image: fintechImage,
-        description: "Una app de gestión de finanzas personales para la generación digital. Enfocada en rendimiento y seguridad.",
-        role: "Desarrollador Full Stack",
-        year: "2023",
-        client: "Proyecto",
-        challenge: "El desafío principal fue asegurar actualizaciones de datos en tiempo real manteniendo una UI fluida a 60fps. La seguridad también fue prioridad.",
-        solution: "Implementé una arquitectura local-first con almacenamiento encriptado. La UI fue construida con React Native para rendimiento multiplataforma.",
-        result: "La app maneja miles de transacciones sin lag. Me enseñó la importancia de optimizar ciclos de renderizado en desarrollo móvil.",
-        technologies: ["React Native", "SQLite", "TypeScript", "Reanimated"],
+        id: "onlypic",
+        title: "OnlyPic.art",
+        category: "Plataforma de Arte IA • Web App",
+        image: onlyPicImage,
+        description: "Transforma fotos en obras maestras de IA y monetiza tu creatividad. Una plataforma para que creadores compartan y ganen con su arte.",
+        role: "Creador y Desarrollador Líder",
+        year: "2025",
+        client: "Proyecto Personal",
+        challenge: "Construir una plataforma segura para monetizar arte IA con encriptación de grado militar y manejar el procesamiento de imágenes de alta resolución a escala fue el principal reto técnico.",
+        solution: "Implementé modelos avanzados de IA para la transformación de fotos, un mercado seguro para desbloquear originales y un sistema de monetización para creadores.",
+        result: "La plataforma ha procesado más de 10K+ transformaciones de IA y aloja a más de 5K+ creadores activos, generando ingresos significativos para la comunidad.",
+        technologies: ["Next.js", "Firebase", "Stripe", "AI Models", "Tailwind CSS"],
         links: {
-          code: "https://github.com/marvinzavala/nova-finance",
+          live: "https://onlypic.art",
         }
       },
       {
-        id: "smart-home",
-        title: "Luma Home",
-        category: "Dashboard Web • IoT",
-        image: smartHomeImage,
-        description: "Un panel centralizado para controlar dispositivos inteligentes. Construido con tecnologías web modernas.",
-        role: "Desarrollador Frontend",
-        year: "2022",
-        client: "Proyecto",
-        challenge: "Integrar varios estándares de API de diferentes fabricantes en una interfaz unificada fue complejo. La gestión de estado en tiempo real fue crucial.",
-        solution: "Usé WebSockets para comunicación en tiempo real y un sistema de componentes modular. El dashboard soporta modo oscuro y es responsivo.",
-        result: "Un dashboard funcional que agrega múltiples dispositivos. Redujo la fricción de gestionar un ecosistema de hogar inteligente.",
-        technologies: ["React", "WebSockets", "IoT APIs", "Chart.js"],
-        links: {}
-      },
-      {
-        id: "eco-packaging",
-        title: "Roots Coffee",
-        category: "E-commerce • Diseño Web",
-        image: packagingImage,
-        description: "Una plataforma de comercio electrónico para una marca de café sostenible. Enfocada en checkout rápido y SEO.",
-        role: "Desarrollador Web",
-        year: "2024",
-        client: "Roots Coffee",
-        challenge: "El cliente necesitaba una tienda personalizada que reflejara su marca ecológica mientras aseguraba altas tasas de conversión.",
-        solution: "Construí una tienda personalizada usando Next.js para renderizado del lado del servidor y SEO óptimo. El flujo de pago fue optimizado.",
-        result: "El sitio logra una puntuación de rendimiento Lighthouse de 100/100. La conversión de ventas mejoró significativamente.",
-        technologies: ["Next.js", "Shopify API", "Framer Motion"],
-        links: {}
-      },
-      {
-        id: "design-system",
-        title: "Orbit UI",
-        category: "Librería de Componentes • Dev Tools",
-        image: designSystemImage,
-        description: "Una librería de componentes integral construida para escalar. Estandarizando elementos UI en múltiples proyectos.",
-        role: "Autor de Librería",
-        year: "2023",
-        client: "Open Source",
-        challenge: "Crear componentes flexibles para varios casos de uso pero estrictos para mantener consistencia. La accesibilidad fue un requisito clave.",
-        solution: "Construí la librería con tipado estricto de TypeScript y cumplimiento WAI-ARIA. La documentación se generó automáticamente.",
-        result: "Un set robusto de componentes que acelera el tiempo de desarrollo. Ahora es la base para todos mis proyectos personales.",
-        technologies: ["React", "Storybook", "TypeScript", "Rollup"],
+        id: "negozapp",
+        title: "Negozapp",
+        category: "SaaS • Herramientas de Negocio",
+        image: negozappImage,
+        description: "Plataforma todo en uno para digitalizar negocios locales. Incluye catálogo digital, sistema de reservas, facturación y un asistente de IA.",
+        role: "Creador y Desarrollador Líder",
+        year: "2025",
+        client: "Proyecto Personal",
+        challenge: "Los negocios locales luchan con herramientas fragmentadas. El reto fue unificar inventario, ventas, reservas e IA en una sola plataforma fácil de usar y optimizada para Centroamérica.",
+        solution: "Desarrollé una solución SaaS integral con frontend en React e integración de IA. Incluye facturación automatizada, gestión de inventario en tiempo real y un asistente de IA inteligente.",
+        result: "Actualmente sirviendo a +150 negocios activos con más de 10,000 facturas generadas. Empoderando a emprendedores locales con herramientas de nivel empresarial sin comisiones.",
+        technologies: ["React", "Tailwind CSS", "AI Models", "Node.js", "PostgreSQL"],
         links: {
-          code: "https://github.com/marvinzavala/orbit-ui",
+          live: "https://negozapp.com",
         }
       },
     ],
