@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "@/lib/i18n";
 import {
     SiReact,
     SiTypescript,
@@ -50,6 +51,7 @@ const row1 = stack.slice(0, 10);
 const row2 = stack.slice(10, 20);
 
 export function TechStack() {
+    const { t } = useLanguage();
     return (
         <section className="py-24 relative z-10 overflow-hidden">
             <div className="container mx-auto max-w-7xl relative mb-16 px-6">
@@ -60,10 +62,10 @@ export function TechStack() {
                         viewport={{ once: true }}
                         className="text-4xl md:text-5xl font-serif mb-6 text-foreground tracking-tight"
                     >
-                        Technologies <span className="text-primary italic">&</span> Tools
+                        {t.hero.techTitle} <span className="text-primary italic">&</span> Tools
                     </motion.h2>
                     <p className="text-muted-foreground text-lg font-light max-w-2xl mx-auto">
-                        The raw materials of innovation.
+                        {t.hero.techSubtitle}
                     </p>
                 </div>
             </div>

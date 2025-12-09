@@ -27,7 +27,7 @@ export function Hero() {
         >
 
 
-          <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl leading-[0.9] mb-8 text-foreground tracking-tight">
+          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[0.9] mb-8 text-foreground tracking-tight flex flex-col items-center md:items-start">
             <TypewriterText text={t.hero.titlePart1} delay={0.5} /> <br className="hidden md:block" />
             <motion.span
               initial={{ width: "0%" }}
@@ -52,15 +52,17 @@ export function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 bg-primary text-primary-foreground rounded-full text-lg font-medium flex items-center justify-center gap-2 shadow-[0_0_20px_-5px_var(--color-primary)] hover:shadow-[0_0_30px_-5px_var(--color-primary)] transition-shadow"
+              onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
             >
-              View My Work <ArrowRight className="w-5 h-5" />
+              {t.hero.viewWork} <ArrowRight className="w-5 h-5" />
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 bg-secondary/50 backdrop-blur-md border border-white/10 text-foreground rounded-full text-lg font-medium hover:bg-secondary/70 transition-colors"
+              onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
             >
-              Contact Me
+              {t.hero.contactMe}
             </motion.button>
           </div>
         </motion.div>

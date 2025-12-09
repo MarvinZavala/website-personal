@@ -43,6 +43,10 @@ export interface Content {
     stackTitle: string;
     projectsTitle: string;
     projectsSubtitle: string;
+    viewWork: string;
+    contactMe: string;
+    techTitle: string;
+    techSubtitle: string;
   };
   contactSection: {
     title: string;
@@ -141,6 +145,10 @@ export const content: Record<Language, Content> = {
       stackTitle: "Tech Stack",
       projectsTitle: "Projects I've Built",
       projectsSubtitle: "Selected Work 2024-2025",
+      viewWork: "View My Work",
+      contactMe: "Contact Me",
+      techTitle: "Technologies",
+      techSubtitle: "The raw materials of innovation.",
     },
     contactSection: {
       title: "Get in Touch",
@@ -443,6 +451,10 @@ export const content: Record<Language, Content> = {
       stackTitle: "Tech Stack",
       projectsTitle: "Proyectos que he construido",
       projectsSubtitle: "Trabajos Seleccionados 2024-2025",
+      viewWork: "Ver Mis Trabajos",
+      contactMe: "Contáctame",
+      techTitle: "Tecnologías",
+      techSubtitle: "La materia prima de la innovación.",
     },
     contactSection: {
       title: "Contáctame",
@@ -562,13 +574,13 @@ export const content: Record<Language, Content> = {
         },
         {
           title: "UI/UX Design",
-          description: "Digital experiences that look and feel professional.",
-          features: ["Modern Aesthetics", "Prototyping", "Design Systems"],
+          description: "Experiencias digitales que se ven y se sienten profesionales.",
+          features: ["Estética Moderna", "Prototipado", "Sistemas de Diseño"],
           icon: "design"
         },
         {
           title: "AI Integrations",
-          description: "Smart applications powered by LLMs like Claude, ChatGPT & Gemini.",
+          description: "Aplicaciones inteligentes impulsadas por LLMs como Claude, ChatGPT y Gemini.",
           features: ["Custom RAG Chatbots", "Process Automation", "OpenAI & Anthropic API"],
           icon: "ai"
         }

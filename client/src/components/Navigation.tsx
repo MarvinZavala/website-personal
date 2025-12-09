@@ -95,7 +95,7 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Nav Links */}
-          <div className="hidden md:flex items-center gap-1 font-medium text-sm">
+          <div className="hidden md:flex items-L, center gap-1 font-medium text-sm">
             {links.map((link) => (
               <a
                 key={link.id}

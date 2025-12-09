@@ -15,43 +15,56 @@ export function TypewriterText({
     speed = 0.05,
     style
 }: TypewriterTextProps) {
-    const container = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: speed,
-                delayChildren: delay,
-            },
-        },
-    };
+    // Split words to prevent mid-word line breaks
+    const words = text.split(" ");
 
-    const child = {
-        hidden: { opacity: 0, y: 5 },
-        visible: {
+    // Calculate global indices for deterministic animation
+    let globalCharIndex = 0;
+
+    const charVariant = {
+        hidden: { opacity: 0 },
+        visible: (i: number) => ({
             opacity: 1,
-            y: 0,
             transition: {
-                duration: 0.1, // Quick snap for typewriter feel
+                delay: delay + (i * speed),
+                duration: 0.1,
             }
-        },
+        }),
     };
 
     return (
-        <motion.span
-            variants={container}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className={`inline-block ${className}`}
+        <span // Changed to simple span/div to avoid framer contextual conflicts
+            key={text} // Force re-mount when text changes to replay animation
+            className={`flex flex-wrap gap-[0.25em] ${className}`}
             style={style}
         >
-            {text.split("").map((char, index) => (
-                <motion.span key={index} variants={child} className="inline-block relative">
-                    {/* Use non-breaking space for spaces to preserve layout */}
-                    {char === " " ? "\u00A0" : char}
-                </motion.span>
-            ))}
-        </motion.span>
+            {words.map((word, wordIndex) => {
+                // Capture current index start for this word
+                const startIndex = globalCharIndex;
+                // Increment global index by word length
+                globalCharIndex += word.length;
+
+                return (
+                    <span
+                        key={wordIndex}
+                        className="whitespace-nowrap flex-shrink-0" // prevent shrinking
+                    >
+                        {word.split("").map((char, charIndex) => (
+                            <motion.span
+                                key={charIndex}
+                                custom={startIndex + charIndex} // Pass global absolute index
+                                variants={charVariant}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                className="inline-block"
+                            >
+                                {char}
+                            </motion.span>
+                        ))}
+                    </span>
+                );
+            })}
+        </span>
     );
 }
