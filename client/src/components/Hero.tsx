@@ -25,17 +25,7 @@ export function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center md:text-left"
         >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6"
-          >
-            <Sparkles className="w-4 h-4 text-primary animate-pulse" />
-            <span className="text-sm font-medium text-primary-foreground tracking-wide">
-              Available for new projects
-            </span>
-          </motion.div>
+
 
           <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl leading-[0.9] mb-8 text-foreground tracking-tight">
             <TypewriterText text={t.hero.titlePart1} delay={0.5} /> <br className="hidden md:block" />

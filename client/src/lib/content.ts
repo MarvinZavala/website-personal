@@ -3,7 +3,7 @@ import localfyImage from "@assets/screenshot-1765160017897.png";
 import onlyPicImage from "@assets/screenshot-1765160140194.png";
 import negozappImage from "@assets/screenshot-1765218655116.png";
 import zummitImage from "@assets/screenshot-1765219186328.png";
-import strategikImage from "@assets/screenshot-1765219432817.png";
+import strategikImage from "@assets/strategik-new.png";
 import absPlumbingImage from "@assets/screenshot-1765219563334.png";
 import twinHandymanImage from "@assets/screenshot-1765219596917.png";
 import oasisImage from "@assets/screenshot-1765220011149.png";
@@ -33,6 +33,7 @@ export interface Content {
   nav: {
     work: string;
     about: string;
+    services: string;
     contact: string;
   };
   hero: {
@@ -130,6 +131,7 @@ export const content: Record<Language, Content> = {
     nav: {
       work: "Work",
       about: "About",
+      services: "Services",
       contact: "Contact",
     },
     hero: {
@@ -339,24 +341,6 @@ export const content: Record<Language, Content> = {
         }
       },
       {
-        id: "strategik-agency",
-        title: "Strategik Agency",
-        category: "Agency Website • Digital Marketing",
-        image: strategikImage,
-        description: "Modern digital agency website featuring AI-powered solutions, automated workflows, and high-conversion landing pages for businesses in El Salvador.",
-        role: "Lead Developer",
-        year: "2025",
-        client: "Strategik Agency",
-        challenge: "The agency needed a high-performance website that could demonstrate their technical expertise in automation and AI while maintaining a 98% satisfaction rate.",
-        solution: "Built a lightning-fast site using Next.js with advanced animations and integrated lead generation forms. Features include an AI RAG chatbot demo and automated booking system.",
-        result: "The site achieves perfect Lighthouse scores and has helped over 500+ businesses digitize. The automated quoting system reduced response time to under 2 hours.",
-        technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "AI RAG", "TypeScript"],
-        links: {
-          live: "https://strategikagency.com",
-        }
-      },
-      // GREEN/TEAL/AQUA Group
-      {
         id: "oasis-oakland",
         title: "Oasis Oakland",
         category: "Mobile App • Community",
@@ -371,6 +355,24 @@ export const content: Record<Language, Content> = {
         technologies: ["React Native", "TypeScript", "Google Maps API", "Local Storage"],
         links: {
           live: "https://oasisoakland.com",
+        }
+      },
+      // GREEN/TEAL/AQUA Group
+      {
+        id: "strategik-agency",
+        title: "Strategik Agency",
+        category: "Agency Website • Digital Marketing",
+        image: strategikImage,
+        description: "Modern digital agency website featuring AI-powered solutions, automated workflows, and high-conversion landing pages for businesses in El Salvador.",
+        role: "Lead Developer",
+        year: "2025",
+        client: "Strategik Agency",
+        challenge: "The agency needed a high-performance website that could demonstrate their technical expertise in automation and AI while maintaining a 98% satisfaction rate.",
+        solution: "Built a lightning-fast site using Next.js with advanced animations and integrated lead generation forms. Features include an AI RAG chatbot demo and automated booking system.",
+        result: "The site achieves perfect Lighthouse scores and has helped over 500+ businesses digitize. The automated quoting system reduced response time to under 2 hours.",
+        technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "AI RAG", "TypeScript"],
+        links: {
+          live: "https://strategikagency.com",
         }
       },
       {
@@ -431,6 +433,7 @@ export const content: Record<Language, Content> = {
     nav: {
       work: "Trabajos",
       about: "Sobre mí",
+      services: "Servicios",
       contact: "Contacto",
     },
     hero: {
@@ -640,24 +643,6 @@ export const content: Record<Language, Content> = {
         }
       },
       {
-        id: "strategik-agency",
-        title: "Strategik Agency",
-        category: "Sitio Web de Agencia • Marketing Digital",
-        image: strategikImage,
-        description: "Sitio web moderno para agencia digital con soluciones de IA, flujos automatizados y páginas de alta conversión para negocios en El Salvador.",
-        role: "Desarrollador Líder",
-        year: "2025",
-        client: "Strategik Agency",
-        challenge: "La agencia necesitaba un sitio de alto rendimiento que demostrara su experiencia técnica en automatización e IA manteniendo una tasa de satisfacción del 98%.",
-        solution: "Construí un sitio ultra rápido usando Next.js con animaciones avanzadas y formularios de generación de leads. Incluye demo de chatbot RAG y sistema de reservas.",
-        result: "El sitio logra puntuaciones perfectas en Lighthouse y ha ayudado a +500 negocios a digitalizarse. El sistema de cotización redujo el tiempo de respuesta a menos de 2 horas.",
-        technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "AI RAG", "TypeScript"],
-        links: {
-          live: "https://strategikagency.com",
-        }
-      },
-      // GREEN/TEAL/AQUA Group
-      {
         id: "oasis-oakland",
         title: "Oasis Oakland",
         category: "App Móvil • Comunidad",
@@ -672,6 +657,24 @@ export const content: Record<Language, Content> = {
         technologies: ["React Native", "TypeScript", "Google Maps API", "Local Storage"],
         links: {
           live: "https://oasisoakland.com",
+        }
+      },
+      // GREEN/TEAL/AQUA Group
+      {
+        id: "strategik-agency",
+        title: "Strategik Agency",
+        category: "Sitio Web de Agencia • Marketing Digital",
+        image: strategikImage,
+        description: "Sitio web moderno para agencia digital con soluciones de IA, flujos automatizados y páginas de alta conversión para negocios en El Salvador.",
+        role: "Desarrollador Líder",
+        year: "2025",
+        client: "Strategik Agency",
+        challenge: "La agencia necesitaba un sitio de alto rendimiento que demostrara su experiencia técnica en automatización e IA manteniendo una tasa de satisfacción del 98%.",
+        solution: "Construí un sitio ultra rápido usando Next.js con animaciones avanzadas y formularios de generación de leads. Incluye demo de chatbot RAG y sistema de reservas.",
+        result: "El sitio logra puntuaciones perfectas en Lighthouse y ha ayudado a +500 negocios a digitalizarse. El sistema de cotización redujo el tiempo de respuesta a menos de 2 horas.",
+        technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "AI RAG", "TypeScript"],
+        links: {
+          live: "https://strategikagency.com",
         }
       },
       {

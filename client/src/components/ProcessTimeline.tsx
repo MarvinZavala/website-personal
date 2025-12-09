@@ -73,7 +73,7 @@ export function ProcessTimeline() {
                                         <div className={cn("absolute inset-0 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500", style.gradient.split(' ')[0].replace('from-', 'bg-'))} />
 
                                         {/* Step Number Badge */}
-                                        <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-xs font-bold text-white/50 backdrop-blur-md">
+                                        <div className="absolute -top-6 -right-6 w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-sm font-bold text-white/90 backdrop-blur-md shadow-lg group-hover:bg-primary/20 group-hover:border-primary/30 transition-colors duration-500">
                                             {step.number}
                                         </div>
                                     </div>

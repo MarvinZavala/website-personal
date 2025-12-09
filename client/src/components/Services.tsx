@@ -144,15 +144,36 @@ function ServiceCard({ service, index, mainIcon, techIcons }: { service: any, in
 
                     {/* Tech Brands (Right) - "Jewel" Style */}
                     <div className="flex -space-x-3">
-                        {techIcons.map((item, i) => (
-                            <div
-                                key={i}
-                                className={`w-12 h-12 rounded-xl border border-white/5 flex items-center justify-center text-xl backdrop-blur-md transition-all duration-300 hover:scale-110 hover:z-20 hover:-translate-y-1 ${item.color} ${item.glow}`}
-                                style={{ zIndex: 10 - i }}
-                            >
-                                {item.icon}
-                            </div>
-                        ))}
+                        {/* Mobile: Show only first 4 icons to prevent clutter */}
+                        <div className="flex md:hidden -space-x-3">
+                            {techIcons.slice(0, 4).map((item, i) => (
+                                <div
+                                    key={`mob-${i}`}
+                                    className={`w-12 h-12 rounded-xl border border-white/5 flex items-center justify-center text-xl backdrop-blur-md ${item.color} ${item.glow}`}
+                                    style={{ zIndex: 10 - i }}
+                                >
+                                    {item.icon}
+                                </div>
+                            ))}
+                            {techIcons.length > 4 && (
+                                <div className="w-12 h-12 rounded-xl border border-white/5 flex items-center justify-center text-xs font-bold text-white/50 backdrop-blur-md bg-white/5" style={{ zIndex: 0 }}>
+                                    +{techIcons.length - 4}
+                                </div>
+                            )}
+                        </div>
+
+                        {/* Desktop: Show all icons */}
+                        <div className="hidden md:flex -space-x-3">
+                            {techIcons.map((item, i) => (
+                                <div
+                                    key={`desk-${i}`}
+                                    className={`w-12 h-12 rounded-xl border border-white/5 flex items-center justify-center text-xl backdrop-blur-md transition-all duration-300 hover:scale-110 hover:z-20 hover:-translate-y-1 ${item.color} ${item.glow}`}
+                                    style={{ zIndex: 10 - i }}
+                                >
+                                    {item.icon}
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
 

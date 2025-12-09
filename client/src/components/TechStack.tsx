@@ -123,7 +123,7 @@ function TechJewel({ tech }: { tech: typeof stack[0] }) {
             {/* Glow Effect */}
             <div className={`absolute inset-0 rounded-full opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 blur-xl ${tech.bg}`} />
 
-            <span className={`text-2xl relative z-10 ${tech.color}`}>
+            <span className={`text-3xl relative z-10 ${tech.color}`}>
                 <tech.icon />
             </span>
             <span className="text-sm font-medium text-gray-300 group-hover/card:text-white transition-colors relative z-10 whitespace-nowrap">

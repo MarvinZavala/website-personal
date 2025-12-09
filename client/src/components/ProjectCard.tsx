@@ -74,13 +74,13 @@ export function ProjectCard({ id, title, category, image, index, featured = fals
             {/* Image with Zoom and Tint Effect */}
             <motion.div
               className="w-full h-full absolute inset-0"
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.6 }}
             >
               <img
                 src={image}
                 alt={title}
-                className="w-full h-full object-cover transition-all duration-500 filter grayscale-[0.5] contrast-[1.1] group-hover:grayscale-0 group-hover:contrast-100"
+                className="w-full h-full object-cover object-top transition-all duration-500 filter grayscale-[0.2] contrast-[1.05] group-hover:grayscale-0 group-hover:contrast-100"
               />
 
               {/* Midnight Tint Overlay - Harmonizes disparate colors */}
